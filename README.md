@@ -22,3 +22,6 @@ WikipediaのAPIから取得した情報を元にオンライン上でお墓を�
 
 ### マーケット
 普段からネットに繋がるデバイスを使用している20~50代。
+
+### 画面遷移図
+https://www.figma.com/file/I3vWNiwNeLorGWqsRN9Z9J/O-maily?node-id=0%3A1
