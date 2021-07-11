@@ -1,0 +1,47 @@
+current directory: /Users/mochio/portfolio/omailly/vendor/bundle/ruby/2.7.0/gems/ruby-ll-2.1.2/ext/c
+/Users/mochio/.rbenv/versions/2.7.3/bin/ruby -I /Users/mochio/.rbenv/versions/2.7.3/lib/ruby/site_ruby/2.7.0 -r ./siteconf20210709-18579-1uartzo.rb extconf.rb
+creating Makefile
+
+current directory: /Users/mochio/portfolio/omailly/vendor/bundle/ruby/2.7.0/gems/ruby-ll-2.1.2/ext/c
+make DESTDIR\= clean
+
+current directory: /Users/mochio/portfolio/omailly/vendor/bundle/ruby/2.7.0/gems/ruby-ll-2.1.2/ext/c
+make DESTDIR\=
+compiling driver.c
+In file included from driver.c:1:
+In file included from ./driver.h:4:
+In file included from /Users/mochio/.rbenv/versions/2.7.3/include/ruby-2.7.0/ruby.h:33:
+/Users/mochio/.rbenv/versions/2.7.3/include/ruby-2.7.0/ruby/ruby.h:2521:20: warning: 'diagnose_if' is a clang extension [-Wgcc-compat]
+    __attribute__((diagnose_if(rb_scan_args_count(fmt)<0,"bad scan arg format","error")))
+                   ^
+/Users/mochio/.rbenv/versions/2.7.3/include/ruby-2.7.0/ruby/ruby.h:2522:20: warning: 'diagnose_if' is a clang extension [-Wgcc-compat]
+    __attribute__((diagnose_if(rb_scan_args_count(fmt)!=varc,"variable argument length doesn't match","error")))
+                   ^
+2 warnings generated.
+compiling driver_config.c
+In file included from driver_config.c:1:
+In file included from ./driver_config.h:4:
+In file included from /Users/mochio/.rbenv/versions/2.7.3/include/ruby-2.7.0/ruby.h:33:
+/Users/mochio/.rbenv/versions/2.7.3/include/ruby-2.7.0/ruby/ruby.h:2521:20: warning: 'diagnose_if' is a clang extension [-Wgcc-compat]
+    __attribute__((diagnose_if(rb_scan_args_count(fmt)<0,"bad scan arg format","error")))
+                   ^
+/Users/mochio/.rbenv/versions/2.7.3/include/ruby-2.7.0/ruby/ruby.h:2522:20: warning: 'diagnose_if' is a clang extension [-Wgcc-compat]
+    __attribute__((diagnose_if(rb_scan_args_count(fmt)!=varc,"variable argument length doesn't match","error")))
+                   ^
+2 warnings generated.
+compiling libll.c
+In file included from libll.c:1:
+In file included from ./libll.h:4:
+In file included from /Users/mochio/.rbenv/versions/2.7.3/include/ruby-2.7.0/ruby.h:33:
+/Users/mochio/.rbenv/versions/2.7.3/include/ruby-2.7.0/ruby/ruby.h:2521:20: warning: 'diagnose_if' is a clang extension [-Wgcc-compat]
+    __attribute__((diagnose_if(rb_scan_args_count(fmt)<0,"bad scan arg format","error")))
+                   ^
+/Users/mochio/.rbenv/versions/2.7.3/include/ruby-2.7.0/ruby/ruby.h:2522:20: warning: 'diagnose_if' is a clang extension [-Wgcc-compat]
+    __attribute__((diagnose_if(rb_scan_args_count(fmt)!=varc,"variable argument length doesn't match","error")))
+                   ^
+2 warnings generated.
+linking shared-object libll.bundle
+
+current directory: /Users/mochio/portfolio/omailly/vendor/bundle/ruby/2.7.0/gems/ruby-ll-2.1.2/ext/c
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 libll.bundle ./.gem.20210709-18579-1ghsfuw

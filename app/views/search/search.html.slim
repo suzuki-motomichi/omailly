@@ -1,0 +1,12 @@
+/ p 郵便番号: #{@zipcode}
+/ p 都道府県: #{@address1}
+/ p 市区町村: #{@address2}
+/ p 町域: #{@address3}
+
+p 検索
+= form_tag({ :controller => 'search', :action => 'search' },{ :method => :get}) do
+  = text_field_tag :keyword
+  = submit_tag 'Search', :name => nil
+
+= @results.title
+= @results.text
