@@ -1,0 +1,29 @@
+h1 タスクの詳細
+.nav.justify-content-end
+  = link_to '一覧', posts_path, class: 'nav-link'
+table.table.table-hover
+  tbody
+    tr
+      th= 'タイトル'
+      td= @post.title
+    tr
+      th= '享年'
+      td= @post.last_day
+    tr
+      th= '内容'
+      td= simple_format(h(@post.content), {}, sanitize: false, wrapper_tag: "div")
+    tr
+      th= '作成日'
+      td= @post.created_at
+    tr
+      th= '更新日'
+      td= @post.updated_at
+      br/
+= link_to 'お参りする', "#"
+#overlay.overlay
+/! モーダルウィンドウ
+.modal-window
+  /! 閉じるボタン
+  button.js-close.button-close Close
+/! モーダルを開くボタン
+button.js-open.button-open open

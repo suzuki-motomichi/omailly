@@ -1,0 +1,19 @@
+h1 内容の確認
+
+= form_with model: @post, local: true do |f|
+  tbody
+    tr
+      th= 'タイトル'
+      td= @post.title
+      = f.hidden_field :title
+    tr
+      th= '内容'
+      td= @post.content
+      = f.hidden_field :content
+    tr
+      th= '享年'
+      td= @post.last_day
+      = f.hidden_field :last_day
+
+  = f.submit '戻る', name: 'back'
+  = f.submit '登録'

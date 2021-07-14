@@ -1,0 +1,17 @@
+h1 供養一覧
+
+= link_to '作成', new_post_path
+/classは後からつける
+
+table.table.table-hover
+  thaed.thead-default
+    tr
+      th= 'タイトル'
+      th= '内容'
+      th= '享年'
+  tbody
+    - @posts.each do |post|
+      tr
+        td= link_to post.title, post
+        td= post.content
+        td= post.last_day

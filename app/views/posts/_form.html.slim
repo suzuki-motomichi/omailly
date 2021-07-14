@@ -1,0 +1,11 @@
+= form_with model: post, local: true, url: confirm_new_post_path do |f|
+  .form-group
+    = f.label 'タイトル'
+    = f.text_field :title, class: 'form-control', id: 'task_name'
+  .form-group
+    = f.label '享年'
+    = f.text_field :last_day, rows: 5, class: 'form-control', id: 'task_description'
+  .form-group
+    = f.label '内容'
+    = f.text_area :content, rows: 5, class: 'form-control', id: 'task_description'
+  = f.submit '確認', class: 'btn btn-primary'
