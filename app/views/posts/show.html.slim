@@ -1,6 +1,13 @@
 h1 タスクの詳細
 .nav.justify-content-end
-  = link_to '一覧', posts_path, class: 'nav-link'
+
+.btn-border-gradient-wrap.btn-border-gradient-wrap--gold
+  a.btn.btn-border-gradient href="/posts"
+    span.btn-text-gradient--gold 一覧
+
+
+
+/ = link_to '一覧', posts_path, class: 'nav-link'
 table.table.table-hover
   tbody
     tr
@@ -19,11 +26,14 @@ table.table.table-hover
       th= '更新日'
       td= @post.updated_at
       br/
-= link_to 'お参りする', "#"
+/ = link_to 'お参りする', "#"
+
 #overlay.overlay
 /! モーダルウィンドウ
 .modal-window
   /! 閉じるボタン
-  button.js-close.button-close Close
+  button.js-close.button-close やめとく
 /! モーダルを開くボタン
-button.js-open.button-open open
+button.js-open.button-open.btn-border-gradient-wrap.btn-border-gradient-wrap--gold
+  a.btn.btn-border-gradient
+    span.btn-text-gradient--gold 御参り
