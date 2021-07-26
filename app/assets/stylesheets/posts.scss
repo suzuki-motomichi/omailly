@@ -1,3 +1,104 @@
 // Place all the styles related to the posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.table{
+  margin: 20px 300px;
+  text-align: center;
+
+  .td-default{
+    display: block;
+  }
+  .tr-tl{
+  }
+
+  .t-body {
+    background-color: #070707;
+    color: #fff;
+    padding: 20px;
+
+    .tr-title {
+      box-shadow: 0 0 7px #faf61d;
+      border: 5px solid #ffd106;
+    }
+
+    .content{
+      text-align: center;
+      display: block;
+    }
+
+    .ttt {
+      text-decoration: none;
+      color: #eafc9c;
+      font-weight: bold;
+      padding: 10px;
+      display: block;
+    }
+    .tty {
+    }
+
+    .tyy {
+      width: 20px;
+    }
+  }
+}
+// 投稿画面
+.container{
+  text-align: center;
+
+  .form-label {
+    text-align: center;
+    display: block;
+  }
+  .form-control {
+    box-shadow: 0 0 7px #eafc9c;
+    border: 1px solid #eeda9a;
+    transition: all .3s;
+    width: 200px;
+    height: 50px;
+    margin-bottom: 10px;
+
+      &.l3 {
+        resize: none;
+        width:400px;
+        height:200px
+      }
+  }
+}
+
+.ihai {
+  position: relative;
+
+  .ihai_1 {
+  width: 500px;
+  height: 400px;
+  z-index: -1;
+  }
+}
+
+.title {
+  float: left;
+  position: absolute;
+  top: 25%;
+  left: 47%;
+  right: 53%;
+  font-size: 40px;
+  text-align: center;
+}
+.content{
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
+
+  .content_01 {
+    display: block;
+  }
+}
+
+.kkk {
+  background-color: #1972f8; /* 花びらの色 */
+  border-radius: 100% 0 100% 0;
+  width: 12px;
+  height: 12px;
+}

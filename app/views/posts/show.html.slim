@@ -1,21 +1,18 @@
-h1 タスクの詳細
+h1 詳細
 .nav.justify-content-end
 
-.btn-border-gradient-wrap.btn-border-gradient-wrap--gold
-  a.btn.btn-border-gradient href="/posts"
-    span.btn-text-gradient--gold 一覧
+.ihai
+  =image_tag 'ihai.png', class: 'ihai_1' do
+    .title =@post.title
 
-
-
-/ = link_to '一覧', posts_path, class: 'nav-link'
-table.table.table-hover
-  tbody
+table.content
+  tbody.content_01
     tr
       th= 'タイトル'
       td= @post.title
     tr
       th= '享年'
-      td= @post.last_day
+      td= "#{@post.last_day}年"
     tr
       th= '内容'
       td= simple_format(h(@post.content), {}, sanitize: false, wrapper_tag: "div")
@@ -33,7 +30,18 @@ table.table.table-hover
 .modal-window
   /! 閉じるボタン
   button.js-close.button-close やめとく
+  #output.output
 /! モーダルを開くボタン
 button.js-open.button-open.btn-border-gradient-wrap.btn-border-gradient-wrap--gold
   a.btn.btn-border-gradient
     span.btn-text-gradient--gold 御参り
+
+
+
+.btn-border-gradient-wrap-1.btn-border-gradient-wrap--silver.button.btn.t-1
+  = link_to posts_path, class: 'btn btn-border-gradient t_1' do
+    span.btn-text-gradient--silver 一覧
+
+.btn-border-gradient-wrap-1.btn-border-gradient-wrap--silver.button.btn.t-1
+  = link_to new_post_path, class: 'btn btn-border-gradient t_1' do
+    span.btn-text-gradient--silver 作成

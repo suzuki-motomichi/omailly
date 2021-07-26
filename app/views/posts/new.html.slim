@@ -1,7 +1,8 @@
 h1 新規登録
 
-.nav.justify-content-end
-  = link_to '一覧', posts_path, class: 'nav-link'
+.btn-border-gradient-wrap-1.btn-border-gradient-wrap--silver.button.btn.t-1
+  a.btn.btn-border-gradient.t_1 href="/posts"
+    span.btn-text-gradient--silver 一覧
 
 = render partial: 'form', locals: { post: @post }
 

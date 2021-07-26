@@ -1,17 +1,20 @@
 h1 供養一覧
+.btn-border-gradient-wrap.btn-border-gradient-wrap--gold
+  = link_to new_post_path, class: 'btn btn-border-gradient t_1' do
+    span.btn-text-gradient--gold 作成
 
-= link_to '作成', new_post_path
 /classは後からつける
 
-table.table.table-hover
-  thaed.thead-default
-    tr
-      th= 'タイトル'
+table.table
+  thaed.td-default
+    tr.tr-tl
+      th= '御名前'
       th= '内容'
       th= '享年'
-  tbody
+  tbody.t-body
     - @posts.each do |post|
-      tr
-        td= link_to post.title, post
+      tr.tr-title
+        td.ttt= link_to post.title, post, class:'ttt'
         td= post.content
-        td= post.last_day
+        td.tyy
+          = "#{post.last_day}年"
