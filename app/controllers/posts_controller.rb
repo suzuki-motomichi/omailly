@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
+  include Pagy::Backend
   def index
-    @posts = Post.all
+    @pagy, @posts = pagy(Post.all)
   end
 
   def new
