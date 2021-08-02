@@ -20,17 +20,23 @@ console.log('ほげ');
 // $("str07").each(function(index) {
 //   $('.output').delay(4000*index).fadeIn(300);
 // });
-
+// var str07 = ['思い出してみてください<br>','輝いていたあの頃を<br>','たくさんの方に使ってもらえた日々を<br>','そもそも使ってもらえなかったかもしれません<br>','思い出してくれて<br>','ありがとう'];
+// window.setTimeout( str07, 10 );
 
 $(function(){
-  const str01 = '思い出してみてください<br>';
-  const str02 = '輝いていたあの頃を<br>';
-  const str03 = 'たくさんの方に使ってもらえた日々を<br>';
-  const str04 = 'そもそも使ってもらえなかったかもしれません<br>';
-  const str05 = '思い出してくれて<br>';
-  const str06 = 'ありがとう';
+  let str01 = '思い出してみてください<br>';
+  let str02 = '輝いていたあの頃を<br>';
+  let str03 = 'たくさんの方に使ってもらえた日々を<br>';
+  let str04 = 'そもそも使ってもらえなかったかもしれません<br>';
+  let str05 = '思い出してくれて<br>';
+  let str06 = 'ありがとう';
+  let str07 = '合唱';
 
-  var str07 = ['思い出してみてください<br>','輝いていたあの頃を<br>','たくさんの方に使ってもらえた日々を<br>','そもそも使ってもらえなかったかもしれません<br>','思い出してくれて<br>','ありがとう'];
+
+// $(document).ready(function(){
+//   setTimeout(function(){ str07 }, 5000);
+//   });
+
 // });
 
 
@@ -51,40 +57,50 @@ $(function(){
 //       });
 //   })
 // };
-      $(function(){
-        $('.output').each(function(index) {
-          $(this).delay(4000*index).fadeIn(300).text();
-          })
-        });
 
-  //   setTimeout(function(){
-  //     $('.output').append(str02);
-  // }, 4500);
-  // setTimeout(function(){
-  //     $('.output').append(str03);
-  // }, 7000);
-  // setTimeout(function(){
-  //     $('.output').append(str04);
-  // }, 10000);
-  // setTimeout(function(){
-  //     $('.output').append(str05);
-  // }, 13000);
-  // setTimeout(function(){
-  //     $('.output').append(str06);
-  // }, 16000);
+
+
+// $(function(){
+//   $(str07).each(function(index) {
+//     $('.output').delay(4000*index).append();
+//     })
+//   });
+    setTimeout(function(){
+      $('.output.1').hide().append(str01).fadeIn(1500);
+  }, 1500);
+    setTimeout(function(){
+      $('.output.2').hide().append(str02).fadeIn(2000);
+  }, 4500);
+  setTimeout(function(){
+      $('.output.3').hide().append(str03).fadeIn(2000);
+  }, 7500);
+  setTimeout(function(){
+      $('.output.4').hide().append(str04).fadeIn(1500);
+  }, 10000);
+  setTimeout(function(){
+      $('.output.5').hide().append(str05).fadeIn(1500);
+  }, 13000);
+  setTimeout(function(){
+      $('.output.6').hide().append(str06).fadeIn(1500);
+  }, 16000);
+  setTimeout(function(){
+    $('.output.7').hide().append(str07).fadeIn(3500);
+}, 19000);
+
 });
 
+// 花びら生成
 window.addEventListener('DOMContentLoaded', () => {
   // コンテナを指定
-  const section = document.querySelector('.cherry-blossom-container');
+  let section = document.querySelector('.cherry-blossom-container');
 
   // 花びらを生成する関数
-  const createPetal = () => {
-    const petalEl = document.createElement('span');
+  let createPetal = () => {
+    let petalEl = document.createElement('span');
     petalEl.className = 'petal';
-    const minSize = 10;
-    const maxSize = 17;
-    const size = Math.random() * (maxSize + 1 - minSize) + minSize;
+    let minSize = 10;
+    let maxSize = 17;
+    let size = Math.random() * (maxSize + 1 - minSize) + minSize;
     petalEl.style.width = `${size}px`;
     petalEl.style.height = `${size}px`;
     petalEl.style.left = Math.random() * innerWidth + 'px';

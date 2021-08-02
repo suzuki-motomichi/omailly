@@ -22,6 +22,11 @@ body {
   cursor: pointer;
 }
 
+/*モーダル内テキストカラー*/
+.output {
+  color: #000000;
+}
+
 /* モーダルウィンドウ */
 .modal-window {
   display: none;
@@ -80,6 +85,7 @@ body {
 
 /* 桜の花びらのスタイル */
 .petal {
+  z-index: -1;
   position: absolute;
   background-color: #ffc0cb; /* 花びらの色 */
   border-radius: 150% 0 150% 0;
@@ -87,6 +93,7 @@ body {
 }
 
 .petal::after {
+  z-index: -1;
   content: "";
   position: absolute;
   top: -14%;
