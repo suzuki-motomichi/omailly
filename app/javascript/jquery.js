@@ -1,12 +1,55 @@
 $(function () {
   $('.js-open').click(function () {
+  if($( "#overlay")[1]) return true;
     $('#overlay, .modal-window').fadeIn();
-  });
-
-  $('.js-close').click(function () {
-    $('#overlay, .modal-window').fadeOut();
+  $('.js-close').unbind().click(function () {
+    $('#overlay, .modal-window').fadeOut(function(){
+      $(".output").css("display", "none");
+      });
+    });
   });
 });
+
+$(function(){
+  let str01 = '思い出してみてください<br>';
+  let str02 = '輝いていたあの頃を<br>';
+  let str03 = 'たくさんの方に使ってもらえた日々を<br>';
+  let str04 = 'そもそも使ってもらえなかったかもしれません<br>';
+  let str05 = '思い出してくれて<br>';
+  let str06 = 'ありがとう';
+  let str07 = 'さようなら';
+  // const url = new URL()
+
+setTimeout(function(){
+  $('.output.1').hide().append(str01).fadeIn(1500);
+}, 1500);
+setTimeout(function(){
+  $('.output.2').hide().append(str02).fadeIn(2000);
+}, 4500);
+setTimeout(function(){
+  $('.output.3').hide().append(str03).fadeIn(2000);
+}, 7500);
+setTimeout(function(){
+  $('.output.4').hide().append(str04).fadeIn(1500);
+}, 10000);
+setTimeout(function(){
+  $('.output.5').hide().append(str05).fadeIn(1500);
+}, 13000);
+setTimeout(function(){
+  $('.output.6').hide().append(str06).fadeIn(1500);
+}, 16000);
+setTimeout(function(){
+  $('.output.7').hide().append(str07).fadeIn(3500);
+}, 19000);
+setTimeout(function(){
+  $('.twitter-share').hide().fadeIn(3600);
+}, 20000);
+
+});
+
+
+
+
 console.log('ほげ');
 
 // var timer;
@@ -23,14 +66,6 @@ console.log('ほげ');
 // var str07 = ['思い出してみてください<br>','輝いていたあの頃を<br>','たくさんの方に使ってもらえた日々を<br>','そもそも使ってもらえなかったかもしれません<br>','思い出してくれて<br>','ありがとう'];
 // window.setTimeout( str07, 10 );
 
-$(function(){
-  let str01 = '思い出してみてください<br>';
-  let str02 = '輝いていたあの頃を<br>';
-  let str03 = 'たくさんの方に使ってもらえた日々を<br>';
-  let str04 = 'そもそも使ってもらえなかったかもしれません<br>';
-  let str05 = '思い出してくれて<br>';
-  let str06 = 'ありがとう';
-  let str07 = '合唱';
 
 
 // $(document).ready(function(){
@@ -65,29 +100,6 @@ $(function(){
 //     $('.output').delay(4000*index).append();
 //     })
 //   });
-    setTimeout(function(){
-      $('.output.1').hide().append(str01).fadeIn(1500);
-  }, 1500);
-    setTimeout(function(){
-      $('.output.2').hide().append(str02).fadeIn(2000);
-  }, 4500);
-  setTimeout(function(){
-      $('.output.3').hide().append(str03).fadeIn(2000);
-  }, 7500);
-  setTimeout(function(){
-      $('.output.4').hide().append(str04).fadeIn(1500);
-  }, 10000);
-  setTimeout(function(){
-      $('.output.5').hide().append(str05).fadeIn(1500);
-  }, 13000);
-  setTimeout(function(){
-      $('.output.6').hide().append(str06).fadeIn(1500);
-  }, 16000);
-  setTimeout(function(){
-    $('.output.7').hide().append(str07).fadeIn(3500);
-}, 19000);
-
-});
 
 // 花びら生成
 window.addEventListener('DOMContentLoaded', () => {

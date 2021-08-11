@@ -8,9 +8,9 @@ h1 供養一覧
 table.table
   thaed.td-default
     tr.tr-tl
-      th= '御名前'
-      th= '内容'
-      th= '享年'
+      th.name= '御名前'
+      th.content= '御説明'
+      th.yaer= '享年'
   tbody.t-body
     - @posts.each do |post|
       tr.tr-title
@@ -18,6 +18,11 @@ table.table
         td= post.content
         td.tyy
           = "#{post.last_day}年"
+        th#app
+          p#counter 0
+          button#increment type="button"  +1
+
+
 .btn-border-gradient-wrap.btn-border-gradient-wrap--gold
   .btn-text-gradient--silver
     == pagy_nav(@pagy)
