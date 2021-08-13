@@ -1,0 +1,53 @@
+h1 内容の確認
+
+/ .ihai
+/   .ihai_1
+/     .post-title
+/       / =@post.title
+/       =simple_format(h(@post.title), {}, sanitize: false)
+/   / =image_tag 'ihai.png', class: 'ihai_1' do
+/   / .title =@post.title
+
+/ table.content
+/   tbody.content_01
+/     tr
+/       th= 'タイトル'
+/       td= @post.title
+/     tr
+/       th= '享年'
+/       td= "#{@post.last_day}年"
+/     tr
+/       th= '内容'
+/       td= simple_format(h(@post.content), {}, sanitize: false, wrapper_tag: "div")
+/     tr
+/       th= '作成日'
+/       td= @post.created_at
+/     tr
+/       th= '更新日'
+/       td= @post.updated_at
+/       br/
+
+
+= form_with model: @post, local: true do |f|
+  tbody
+    tr
+      th
+      .ihai
+        .ihai_1
+          .post-title
+            td=simple_format(h(@post.title), {}, sanitize: false)
+        = f.hidden_field :title
+    table.content
+      tr
+        th= '享年'
+      tr
+        td= "#{@post.last_day}年"
+        = f.hidden_field :last_day
+      tr
+        th= '御説明'
+      tr
+        td= simple_format(h(@post.content), {}, sanitize: false, wrapper_tag: "div")
+        = f.hidden_field :content
+
+  = f.submit '戻る', name: 'back', class: 'btn btn-border-gradient t_1 btn-border-gradient-wrap-1 btn-border-gradient-wrap--silver button btn t-1 btn-text-gradient--silver'
+  = f.submit '登録', class: 'btn-border-gradient-wrap-1 btn-border-gradient-wrap--silver button btn t-1 btn-border-gradient-wrap btn-border-gradient-wrap--gold btn-text-gradient--gold'

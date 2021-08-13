@@ -1,0 +1,151 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.table{
+  padding: 0 20%;
+  text-align: center;
+
+  .td-default{
+    // display: block;
+  }
+  .tr-tl{
+  }
+
+  .t-body {
+    background-color: #070707;
+    color: #fff;
+
+    .tr-title td {
+      box-shadow: 0 0 10px #bdba28b7;
+      border: 1px solid #ffd10671;
+    }
+
+    .ttt {
+      text-decoration: none;
+      color: #eafc9c;
+      font-weight: bold;
+      // width: 20px;
+    }
+    .tty {
+      text-align: center;
+    }
+
+    .tyy {
+      // width: 40px;
+      padding: 0 50px;
+    }
+  }
+}
+// 投稿画面
+.container{
+  text-align: center;
+
+  .form-label {
+    text-align: center;
+    display: block;
+  }
+  .form-control {
+    box-shadow: 0 0 7px #eafc9c;
+    border: 1px solid #eeda9a;
+    transition: all .3s;
+    width: 200px;
+    height: 50px;
+    margin-bottom: 10px;
+
+      &.l3 {
+        resize: none;
+        width:400px;
+        height:200px
+      }
+  }
+}
+
+.ihai {
+  position: relative;
+
+  .ihai_1 {
+  width: 500px;
+  height: 400px;
+  z-index: -1;
+  }
+
+
+.title {
+  position: absolute;
+  font-size:4em;
+  font-weight: 600;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  word-break : break-all;
+}
+}
+
+.content{
+  text-align: center;
+  // margin-left: 50%;
+  // margin-right: 50%;
+  // width: 200px;
+  padding: 0 30%;
+
+  .content_01 {
+    // display: block;
+
+    .content_title {
+      font-size: 20px;
+      display: block;
+    }
+  }
+}
+
+.pagy-nav .pagination{
+
+  .page.prev{
+    font-size: 20px;
+    background: -webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      from(#ffffdb),
+      to(#a16422)
+    );
+    -webkit-background-clip: text;
+
+
+    background: -webkit-linear-gradient(bottom, #ffffdb, #0e0c0a);
+
+    background: linear-gradient(to top, #131312, #a16422);
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+    }
+
+    .page.pagy-nav{
+      background: #000;
+      -webkit-background: text;
+      // -webkit-text-fill-color: transparent;
+      background: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        from(#ffffdb),
+        to(#a16422)
+      );
+    }
+  }
+
+
+// サーフボード
+// .kkk {
+//   border-radius: 120% 3% 120% 0;
+//   margin: 30px;
+//   width: 100px;
+//   height: 120px;
+//   transform: rotate(50deg);
+//   border: ridge rgba(73, 71, 71, 0.548);
+//   background:
+//   repeating-linear-gradient(90deg, rgb(0, 174, 255) 10px, rgb(8, 120, 165) 40px,
+//     rgb(14, 1, 88) 30px);
+//   }
