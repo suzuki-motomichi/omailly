@@ -87,12 +87,16 @@ GEM
     mail (2.7.1)
       mini_mime (>= 0.1.1)
     marcel (1.0.1)
+    meta-tags (2.15.0)
+      actionpack (>= 3.2.0, < 6.2)
     method_source (1.0.0)
     mini_mime (1.1.0)
     minitest (5.14.4)
     msgpack (1.4.2)
     nio4r (2.5.7)
     nokogiri (1.11.7-x86_64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.11.7-x86_64-linux)
       racc (~> 1.4)
     pagy (4.10.1)
     parallel (1.20.1)
@@ -236,6 +240,7 @@ DEPENDENCIES
   byebug
   jbuilder (~> 2.7)
   listen (~> 3.3)
+  meta-tags
   pagy
   pg (~> 1.1)
   pry-rails
