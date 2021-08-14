@@ -69,11 +69,12 @@ body {
   z-index: 10;
 }
 
-.output{
-  text-align:center;
-  margin:30px 0;
+#output{
+  // text-align:center;
+  // margin:30px 0;
   color:#000000;
   // display: none;
+  line-height: 2.5rem;
 }
 
 /* 桜を表示するコンテナのスタイル */
