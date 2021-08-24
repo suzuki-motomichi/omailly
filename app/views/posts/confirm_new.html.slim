@@ -49,5 +49,5 @@ h1 内容の確認
         td= simple_format(h(@post.content), {}, sanitize: false, wrapper_tag: "div")
         = f.hidden_field :content
 
-  = f.submit '戻る', name: 'back', class: 'btn btn-border-gradient t_1 btn-border-gradient-wrap-1 btn-border-gradient-wrap--silver button btn t-1 btn-text-gradient--silver'
-  = f.submit '登録', class: 'btn-border-gradient-wrap-1 btn-border-gradient-wrap--silver button btn t-1 btn-border-gradient-wrap btn-border-gradient-wrap--gold btn-text-gradient--gold'
+  = f.submit '戻る', name: 'back', class: 'btns btn-text-gradient--silver'
+  = f.submit '作成', class: 'btns btn-text-gradient--gold ms-5'

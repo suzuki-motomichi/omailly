@@ -38,7 +38,7 @@ html {
   // font-size: 62.5%;
 }
 
-.btn,
+.btns,
 a.btn,
 button.btn {
   font-size: 1.6rem;
@@ -157,6 +157,7 @@ body {
       from(#fff),
       to(#999)
     );
+    margin: 10px;
     background: -webkit-linear-gradient(bottom, #fff, #999);
     background: linear-gradient(to top, #fff, #999);
     -webkit-background-clip: text;
@@ -193,7 +194,7 @@ body {
       from(#ffffdb),
       to(#a16422)
     );
-
+    margin: 10px;
     background: -webkit-linear-gradient(bottom, #ffffdb, #a16422);
 
     background: linear-gradient(to top, #ffffdb, #a16422);

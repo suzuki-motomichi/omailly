@@ -3,18 +3,20 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 th {
   font-size: 20px;
-  padding: 5px;
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  color: #993300;
+  color: #eafc9c;
 }
-
+.table th, .table td{
+  border: none;
+}
 .table{
   margin: 0 auto;
   text-align: center;
+  width: 65%;
 
   .td-default{
     display: block;
+    border: none;
+
   }
   .tr-tl{
     margin: 0 auto;
@@ -22,7 +24,7 @@ th {
       width: 120px;
     }
     .yaer{
-      width: 60px;
+      width: 120px;
     }
   }
 
@@ -33,7 +35,7 @@ th {
 
     .tr-title {
       box-shadow: 0 0 7px #faf61d;
-      border: 5px solid #ffd106;
+      // border: 1px solid #ffd106;
     }
 
     .content{
@@ -73,6 +75,7 @@ th {
     height: 50px;
     margin-bottom: 10px;
     background-color: #ffffffb0;
+    margin: 0 auto;
 
     &.l2{
       resize: none;
@@ -157,19 +160,20 @@ th {
 // }
 
 
-.title {
-  float: left;
-  // position: absolute;
-  top: 25%;
-  left: 47%;
-  right: 53%;
-  font-size: 40px;
-  text-align: center;
-}
+// .title {
+//   float: left;
+//   // position: absolute;
+//   top: 25%;
+//   left: 47%;
+//   right: 53%;
+//   font-size: 40px;
+//   text-align: center;
+// }
 .content{
-  margin: 0 auto;
-  padding-bottom: 10px;
+  // margin: 0 auto;
+  // padding-bottom: 10px;
   width: 300px;
+  margin: 30px auto;
 }
 
 .pagy-nav{
@@ -186,6 +190,7 @@ th {
       from(#fff),
       to(#999)
     );
+    padding: 10px;
     background: -webkit-linear-gradient(bottom, #fff, #999);
     background: linear-gradient(to top, #fff, #999);
     -webkit-background-clip: text;

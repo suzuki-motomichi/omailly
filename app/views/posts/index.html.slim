@@ -1,7 +1,7 @@
 h1 供養一覧
 .btn-border-gradient-wrap.btn-border-gradient-wrap--gold
   = link_to new_post_path, class: 'btn btn-border-gradient t_1' do
-    span.btn-text-gradient--gold 作成
+    span.btn-text-gradient--gold 新規作成
 
 /classは後からつける
 
@@ -12,16 +12,7 @@ table.table
       th.content= '御説明'
       th.yaer= '享年'
   tbody.t-body
-    - @posts.each do |post|
-      tr.tr-title
-        td.ttt= link_to post.title, post, class:'ttt'
-        td= post.content
-        td.tyy
-          = "#{post.last_day}年"
-        th#app
-          p#counter 0
-          button#increment type="button"  +1
-
+    =render @posts
 
 .btn-border-gradient-wrap.btn-border-gradient-wrap--gold
   .btn-text-gradient--silver
