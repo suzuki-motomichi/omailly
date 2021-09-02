@@ -1,0 +1,83 @@
+/ body
+/   header
+/     nav.navbar.navbar-expand-lg.navigation.navbar-light.bg-light
+/       = link_to image_tag('favicon.png', class: 'navbar-brand' )
+/       button.navbar-toggler aria-controls="navbarSupportedContent" aria-expanded="false" aria-label=("Toggle navigation") data-target="#navbarSupportedContent" data-toggle="collapse" 
+/         span.navbar-toggler-icon
+/         #navbarSupportedContent.collapse.navbar-collapse
+/           ul.navbar-nav.ml-auto.main-nav.align-items-center
+/             li.nav-item.dropdown.dropdown-slide
+/               a.nav-link.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" 
+/                 = I18n.t('activerecord.attributes.board.board')
+/               .dropdown-menu.dropdown-menu-right
+/                 = link_to 'テスト', root_path, class: 'dropdown-item'
+/                 = link_to 'ほげ', root_path, class: 'dropdown-item'
+/             li.nav-item
+/               = link_to 'ブックマーク一覧', root_path, class:'nav-link'
+/             li.nav-item.dropdown.dropdown-slide
+/               a#header-profile.nav-link aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" 
+/                 = image_tag 'favicon.png', class:'rounded-circle mr15', width:'40' ,height:'40'
+/               .dropdown-menu.dropdown-menu-right
+/                 .dropdown-item= 'foo'
+/                 .dropdown-divider
+/                 = link_to 'ホゲホゲ', root_path, class:'dropdown-item'
+/                 = link_to 'フガフガ', root_path, class:'dropdown-item', method: :delete
+
+/ nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+/   .container-fluid
+/     a.navbar-brand href="#"  ブランド
+/     button.navbar-toggler aria-controls="navbar" aria-expanded="false" aria-label="ナビゲーションの切替" data-bs-target="#navbar" data-bs-toggle="collapse" type="button" 
+/       span.navbar-toggler-icon
+/     #navbar.collapse.navbar-collapse
+/       ul.navbar-nav.me-auto.mb-2.mb-lg-0
+/         li.nav-item
+/           a.nav-link.active aria-current="page" href="#"  ホーム
+/         li.nav-item
+/           a.nav-link href="#"  リンク
+/         li.nav-item
+/           a.nav-link.disabled aria-disabled="true" href="#" tabindex="-1"  無効
+/         li.nav-item.dropdown
+/           a#dropdown.nav-link.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-bs-toggle="dropdown" href="#"  ドロップダウン
+/           .dropdown-menu aria-labelledby="dropdown"
+/             a.dropdown-item href="#"  リンク1
+/             a.dropdown-item href="#"  リンク2
+/             a.dropdown-item href="#"  リンク3
+/       form.d-flex
+/         input.form-control aria-label="検索..." placeholder="検索..." type="search" /
+
+
+header
+  nav#header.navbar.navbar-expand-lg.navbar-dark.navbar-light
+    .container-fluid
+      = link_to root_path, class:"navbar-brand" do
+        = image_pack_tag 'title-logo.png'
+      button.navbar-toggler. aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button" 
+        span.navbar-toggler-icon
+      #navbarSupportedContent.collapse.navbar-collapse
+        ul.navbar-nav.ms-auto.mb-2.mb-lg-0
+          li.nav-item
+            = link_to 'Home', "#", class: 'nav-link'
+          li.nav-item
+            a.nav-link href="#"  Link
+          li.
+            form.d-flex
+              input.form-control.me-2 aria-label="Search" placeholder="タイトルを入力" type="search" /
+              button.btn-text-gradient--silver.mr-3 type="submit"  検索
+
+/ nav.navbar.navbar-expand-lg.navbar-light.navbar-dark
+  .container-fluid
+    = link_to root_path, class:"navbar-brand" do
+      = image_pack_tag 'title-logo.png'
+    button.navbar-toggler aria-controls="navbarSupportedContent" aria-expanded="false" aria-label=("Toggle navigation") data-bs-target="#navbarTogglerDemo02" data-bs-toggle="collapse" type="button" 
+      span.navbar-toggler-icon
+    #navbarSupportedContent.collapse.navbar-collapse
+      ul.navbar-nav.me-auto.mb-2.mb-lg-0
+        li.nav-item
+          a.nav-link.active aria-current="page" href="#"  Home
+        li.nav-item
+          a.nav-link href="#"  Link
+        li.nav-item
+          a.nav-link.disabled aria-disabled="true" href="#" tabindex="-1"  Disabled
+      form.d-flex
+        input.form-control.me-2 aria-label="Search" placeholder="Search" type="search" /
+        button.btn.btn-outline-success.mr-0 type="submit"  Search

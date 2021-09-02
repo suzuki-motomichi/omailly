@@ -1,6 +1,9 @@
 // Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+nav {
+  color: #ffffff;
+}
 
 .content-01 {
     display       : inline-block;
@@ -21,9 +24,14 @@
     background-image    : #7a7a7a;     /* 文字色     */
   }
 
-.nav-link {
-    border: 6px ridge #e53b4e;
+  .navbar-light .navbar-nav .nav-link {
+    // border: 6px ridge #e53b4e;
+    color: #ffffff;
   }
+
+  // .btn-outline-success {
+  //   color: ;
+  // }
 
   *,
 *:before,
@@ -38,7 +46,7 @@ html {
   // font-size: 62.5%;
 }
 
-.btn,
+.btns,
 a.btn,
 button.btn {
   font-size: 1.6rem;
@@ -86,8 +94,11 @@ body {
 }
 // その他ボタン
 .btn-border-gradient-wrap-1{
-  padding: 0.2rem;
   margin: 1rem 20px;
+  display: inline-block;
+  padding: 0.2rem;
+  border-radius: 0.5rem;
+
 }
 
 // ゴールド
@@ -116,19 +127,17 @@ body {
 // シルバー
   .btn-border-gradient-wrap--silver {
     background-image: -webkit-linear-gradient(
-      315deg,
-      #333 0%,
-      #868888 20%,
-      #d8dcdc 34%,
-      #999a9c 35%,
-      #cccdce 43%,
-      white 53%,
-      #d1d6d7 68%,
-      #9b9d9f 84%,
-      #666 100%
-    );
+      308deg,
+      #704308 0%,
+      #ffce08 37%,
+      #fefeb2 47%,
+      #fafad6 50%,
+      #fefeb2 53%,
+      #e1ce08 63%,
+      #704308 100%
+      );
     background-image: linear-gradient(
-      135deg,
+      308deg,
       #333 0%,
       #868888 20%,
       #d8dcdc 34%,
@@ -148,7 +157,7 @@ body {
 
   .btn-text-gradient--silver {
     font-family: "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro",
-    "Hiragino Mincho ProN", "HGS明朝E", "ＭＳ Ｐ明朝", serif, 'Montserrat';
+    "Hiragino Mincho ProN", "HGS明朝E", "ＭＳ Ｐ明朝", serif;
 
     background: -webkit-gradient(
       linear,
@@ -162,6 +171,9 @@ body {
     -webkit-background-clip: text;
 
     -webkit-text-fill-color: transparent;
+    &.mr{
+      width: 100px;
+    }
   }
 
   .btn-border-gradient-wrap--silver:hover a.btn {
@@ -184,7 +196,7 @@ body {
 
   .btn-text-gradient--gold {
     font-family: "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro",
-      "Hiragino Mincho ProN", "HGS明朝E", "ＭＳ Ｐ明朝", serif, 'Montserrat';
+      "Hiragino Mincho ProN", "HGS明朝E", "ＭＳ Ｐ明朝", serif;
 
     background: -webkit-gradient(
       linear,
@@ -193,7 +205,6 @@ body {
       from(#ffffdb),
       to(#a16422)
     );
-
     background: -webkit-linear-gradient(bottom, #ffffdb, #a16422);
 
     background: linear-gradient(to top, #ffffdb, #a16422);
@@ -201,24 +212,3 @@ body {
 
     -webkit-text-fill-color: transparent;
 }
-
-.btn-text-gradient--gold-2 {
-  font-family: "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro",
-    "Hiragino Mincho ProN", "HGS明朝E", "ＭＳ Ｐ明朝", 'Montserrat', serif;
-
-  background: -webkit-gradient(
-    linear,
-    left bottom,
-    left top,
-    from(#ffffdb),
-    to(#a16422)
-  );
-
-  background: -webkit-linear-gradient(bottom, #ffffdb, #0e0c0a);
-
-  background: linear-gradient(to top, #131312, #a16422);
-  -webkit-background-clip: text;
-
-  -webkit-text-fill-color: transparent;
-}
-

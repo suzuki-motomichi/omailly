@@ -6,7 +6,7 @@ h1 詳細
     .post-title
       / =@post.title
       =simple_format(h(@post.title), {}, sanitize: false)
-  / =image_tag 'ihai.png', class: 'ihai_1' do
+  / =image_pack_tag 'ihai.png', class: 'ihai_1' do
   / .title =@post.title
 
 table.content

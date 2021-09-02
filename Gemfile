@@ -25,7 +25,6 @@ gem 'pagy'
 # gem 'image_processing', '~> 1.2'
 gem 'meta-tags'
 
-gem 'bootstrap', '~> 4.5.0'
 gem 'jquery-rails'
 
 # Reduces boot times through caching; required in config/boot.rb
