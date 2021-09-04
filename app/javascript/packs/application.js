@@ -9,6 +9,8 @@
 
 // Rails.start()
 // ActiveStorage.start()
+import 'bootstrap';
+import '../stylesheets/application';
 
 require("@rails/ujs").start()
 require("@rails/activestorage").start()
@@ -17,3 +19,6 @@ require('jquery')
 require('jquery.js')
 require('font.js')
 // require('script.js')
+
+const images = require.context("../images", true);
+const imagePath = name => images(name, true);
