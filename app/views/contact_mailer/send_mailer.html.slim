@@ -1,0 +1,11 @@
+  = @inquiry.name
+  | 様
+br/
+p この度は、お問合せいただき誠にありがとうございます。
+p お問合せいただきました内容を確認させていただき、今後のサービス運営に役立てて参ります。今後とも omailly をよろしくお願い申し上げます。
+br/
+p
+  | カテゴリー: #{I18n.t("enums.inquiry.category.#{@inquiry.category}")}
+br/
+p
+  | お問合せ内容: #{@inquiry.message}
