@@ -1,0 +1,13 @@
+ja:
+  activerecord:
+    attributes:
+      post:
+        title: "タイトル"
+        last_day: "享年"
+        content: "内容"
+        password_confirmation: "パスワード確認"
+      inquiry:
+        name: "お名前"
+        email: "メールアドレス"
+        category: 'カテゴリー'
+        message: 'お問合せ内容'

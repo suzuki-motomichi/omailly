@@ -1,0 +1,30 @@
+- content_for(:title, "お問合せ")
+.container
+  h1= t '.title'
+.container
+  .row
+    .col-md-10.offset-md-1.col-lg-8.offset-lg-2
+      = form_with model: @inquiry, url: contact_mailer_path, local: true do |f|
+        table.table
+          tr
+            th 名前
+            td
+              = f.hidden_field :name
+              = @inquiry.name
+          tr
+            th メールアドレス
+            td
+              = f.hidden_field :email
+              = @inquiry.email
+          tr
+            th カテゴリー
+            td
+              = f.hidden_field :category
+              = Inquiry.categories_i18n[@inquiry.category]
+          tr
+            th お問い合わせ内容
+            td
+              = f.hidden_field :message
+              = simple_format(@inquiry.message)
+        = f.submit '戻る', name: 'back', class: 'btns btn-text-gradient--silver m-3'
+        = f.submit '送信', class: 'btns btn-text-gradient--gold m-3'

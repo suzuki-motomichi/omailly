@@ -1,0 +1,27 @@
+- content_for(:title, "お問合せ")
+.container
+  h1= t '.title'
+.container
+  .row
+    .col-md-10.offset-md-1.col-lg-8.offset-lg-2.
+      = form_with model: @inquiry, url: confirm_new_contact_mailer_path, local: true do |f|
+        .input-form.h4.py-3
+          = f.label :name, Inquiry.human_attribute_name(:name)
+          br/
+          = f.text_field :name, type: "text", placeholder: "御参り〜"
+        .input-form.h4.py-3
+          = f.label :email, Inquiry.human_attribute_name(:email)
+          br/
+          = f.text_field :email, type: "text", placeholder: "omailly@example.com"
+        .input-form.h4.py-3
+          = f.label :category, Inquiry.human_attribute_name(:category), class: "required"
+          br/
+          = f.select :category, Inquiry.categories_i18n.invert.to_a
+          = render 'shared/error_messages', model: f.object, attribute: :category
+        .input-form.h4.py-3
+          = f.label :message, Inquiry.human_attribute_name(:message), class: "required"
+          br/
+          = f.text_area :message, class: "form-control l3", type: "text", placeholder: "例：これはひどいアプリですね", rows: "5"
+          = render 'shared/error_messages', model: f.object, attribute: :message
+        .actions.text-center.topbtn
+          = f.submit '確認', class: "btns btn-text-gradient--gold m-3"
