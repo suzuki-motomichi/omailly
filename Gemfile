@@ -20,14 +20,21 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem "slim-rails"
+
+# ページネーション
 gem 'pagy'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
+
+# Twitter用
 gem 'meta-tags'
 
 gem 'jquery-rails'
-
+# 検索機能
 gem 'ransack'
+# 翻訳
+gem 'rails-i18n'
+gem 'enum_help'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
