@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  mount LetterOpenerWeb::Engine, at: '/letter_opener' if Rails.env.development?
   root 'static_pages#top'
   resources :posts do
     post :confirm, action: :confirm_new, on: :new
