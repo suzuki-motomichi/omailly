@@ -34,27 +34,27 @@ $(() => {
     });
 });
 
-window.addEventListener("DOMContentLoaded", () => {
-  let section = document.querySelector(".cherry-blossom-container");
+// window.addEventListener("DOMContentLoaded", () => {
+//   let section = document.querySelector(".cherry-blossom-container");
 
-  let createPetal = () => {
-    let petalEl = document.createElement("span");
-    petalEl.className = "petal";
-    let minSize = 10;
-    let maxSize = 17;
-    let size = Math.random() * (maxSize + 1 - minSize) + minSize;
-    petalEl.style.width = `${size}px`;
-    petalEl.style.height = `${size}px`;
-    petalEl.style.left = Math.random() * innerWidth + "px";
-    section.appendChild(petalEl);
+//   let createPetal = () => {
+//     let petalEl = document.createElement("span");
+//     petalEl.className = "petal";
+//     let minSize = 10;
+//     let maxSize = 17;
+//     let size = Math.random() * (maxSize + 1 - minSize) + minSize;
+//     petalEl.style.width = `${size}px`;
+//     petalEl.style.height = `${size}px`;
+//     petalEl.style.left = Math.random() * innerWidth + "px";
+//     section.appendChild(petalEl);
 
-    setTimeout(() => {
-      petalEl.remove();
-    }, 10000);
-  };
+//     setTimeout(() => {
+//       petalEl.remove();
+//     }, 10000);
+//   };
 
-  setInterval(createPetal, 120);
-});
+//   setInterval(createPetal, 120);
+// });
 
 // // 花びら生成
 // window.addEventListener('DOMContentLoaded', () => {

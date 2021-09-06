@@ -1,0 +1,5 @@
+#error_messages
+  - if model.errors.any?
+    .text-danger
+      - model.errors.full_messages_for(attribute).each do |msg|
+        | ・ #{msg}
