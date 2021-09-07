@@ -24,15 +24,15 @@ table.content
 #overlay.overlay
 /! モーダルウィンドウ
 .modal-window
+  #js-fixed-bottom.fix-bottom
+    = link_to "https://twitter.com/share?&url=https://omailly.herokuapp.com/&text=【#{@post.title}】をお参りしました。また逢う日まで…合掌🙏&hashtags=オマイリー,お参り&lang=ja", title: 'Twitter', target: :_blank, rel: 'noopener noreferrer' do
+      .btn-border-gradient-wrap-1.btn-border-gradient-wrap--silver.button.btns.t-1
+        a.btn.btn-border-gradient.t_1
+          span.btn-text-gradient--silver シェア
+
   /! 閉じるボタン
   button.js-close.button-close やめとく
   #output.output.1
-  .output.2
-  .output.3
-  .output.4
-  .output.5
-  .output.6
-  .output.7
   / = link_to 'Twitter', "", target: :_blank, rel: 'noopener noreferrer', class: "twitter-share"
 br/
 /! モーダルを開くボタン
