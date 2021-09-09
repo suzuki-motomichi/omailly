@@ -3,3 +3,6 @@ ja:
     contact_mailers:
       new:
         title: 'お問合せ'
+  posts:
+    index:
+      no_result: '検索結果がありません'

@@ -1,7 +1,10 @@
 class PostsController < ApplicationController
   include Pagy::Backend
   def index
-    @pagy, @posts = pagy(Post.all)
+    # binding.pry
+    @q = Post.ransack(params[:q])
+    @search = @q.result(distinct: true).order(created_at: :desc)
+    @pagy, @posts = pagy(@search)
   end
 
   def new
