@@ -1,5 +1,5 @@
 current directory: /Users/mochio/portfolio/omailly/vendor/bundle/ruby/2.7.0/gems/msgpack-1.4.2/ext/msgpack
-/Users/mochio/.rbenv/versions/2.7.3/bin/ruby -I /Users/mochio/.rbenv/versions/2.7.3/lib/ruby/site_ruby/2.7.0 -r ./siteconf20210708-96289-14ti76r.rb extconf.rb
+/Users/mochio/.rbenv/versions/2.7.3/bin/ruby -I /Users/mochio/.rbenv/versions/2.7.3/lib/ruby/site_ruby/2.7.0 -r ./siteconf20210912-20882-j2b1vy.rb extconf.rb
 checking for ruby/st.h... yes
 checking for st.h... yes
 checking for rb_str_replace() in ruby.h... yes
@@ -53,4 +53,4 @@ linking shared-object msgpack/msgpack.bundle
 
 current directory: /Users/mochio/portfolio/omailly/vendor/bundle/ruby/2.7.0/gems/msgpack-1.4.2/ext/msgpack
 make DESTDIR\= install
-/usr/bin/install -c -m 0755 msgpack.bundle ./.gem.20210708-96289-1i54027/msgpack
+/usr/bin/install -c -m 0755 msgpack.bundle ./.gem.20210912-20882-1169fyb/msgpack

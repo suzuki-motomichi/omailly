@@ -1,5 +1,5 @@
 current directory: /Users/mochio/portfolio/omailly/vendor/bundle/ruby/2.7.0/gems/sassc-2.4.0/ext
-/Users/mochio/.rbenv/versions/2.7.3/bin/ruby -I /Users/mochio/.rbenv/versions/2.7.3/lib/ruby/site_ruby/2.7.0 -r ./siteconf20210708-96289-luk62d.rb extconf.rb
+/Users/mochio/.rbenv/versions/2.7.3/bin/ruby -I /Users/mochio/.rbenv/versions/2.7.3/lib/ruby/site_ruby/2.7.0 -r ./siteconf20210912-20882-1g9jgti.rb extconf.rb
 creating Makefile
 
 current directory: /Users/mochio/portfolio/omailly/vendor/bundle/ruby/2.7.0/gems/sassc-2.4.0/ext
@@ -77,4 +77,4 @@ linking shared-object sassc/libsass.bundle
 
 current directory: /Users/mochio/portfolio/omailly/vendor/bundle/ruby/2.7.0/gems/sassc-2.4.0/ext
 make DESTDIR\= install
-/usr/bin/install -c -m 0755 libsass.bundle ./.gem.20210708-96289-o9bsg2/sassc
+/usr/bin/install -c -m 0755 libsass.bundle ./.gem.20210912-20882-1o5hf0/sassc
