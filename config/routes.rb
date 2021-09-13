@@ -1,13 +1,10 @@
 Rails.application.routes.draw do
   root 'static_pages#top'
+  get '/terms', to: 'static_pages#terms'
+  get '/privacy', to: 'static_pages#privacy'
+  get '/description', to: 'static_pages#description'
+
   resources :posts do
     post :confirm, action: :confirm_new, on: :new
   end
-  # resources :prays
-
-
-  # resources :posts do
-  #   post :confirm, action: :confirm_new, on: :new
-  # end
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

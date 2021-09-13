@@ -8,8 +8,8 @@ header
       #navbarSupportedContent.collapse.navbar-collapse
         ul.navbar-nav.ms-auto.mb-2.mb-lg-0
           li.nav-item
-            = link_to '使い方', "#", class: 'nav-link'
+            = link_to '使い方', description_path, class: 'nav-link'
           li.nav-item
-            = link_to 'お問い合わせ', "#", class: 'nav-link'
+            = link_to 'お参り一覧', posts_path, class: 'nav-link'
           li.
             = render 'shared/search', url: posts_path
