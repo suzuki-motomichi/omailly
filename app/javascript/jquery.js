@@ -27,15 +27,15 @@ let str2 = [
 ];
 
 let str3 = [
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
+  "え？",
+  "まだ存在してませんか？",
+  "あ、無かったですか…",
+  "そうですか…",
+  "わたしの思い違いか",
+  "な〜む〜",
 ];
 
-const strWords = [str,str1];
+const strWords = [str,str1,str2,str3];
 const arr = Math.floor(Math.random() * strWords.length);
 console.log(strWords[arr]);
 $(() => {
