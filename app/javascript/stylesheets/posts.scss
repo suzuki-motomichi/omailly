@@ -1,6 +1,3 @@
-// Place all the styles related to the posts controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
 th {
   font-size: 20px;
   color: #eafc9c;
@@ -35,7 +32,6 @@ th {
 
     .tr-title {
       box-shadow: 0 0 7px #faf61d;
-      // border: 1px solid #ffd106;
     }
 
     .content{
@@ -90,7 +86,6 @@ th {
 
 // 詳細画面
 .ihai {
-  // position: relative;
   text-align: center;
 
   .ihai_1 {
@@ -100,17 +95,12 @@ th {
   height: 400px;
   z-index: -1;
   margin: 0 auto;
-  // position: relative;
-  // position: absolute;
 
     .post-title {
-      // position: relative;
       font-size: 1rem;
       padding: 17%;
-      // position: absolute;
     }
     .small{
-      // position: absolute;
       font-size: 4rem;
       width: 400px;
       height: 280px;
@@ -154,24 +144,7 @@ th {
     }
   }
 }
-
-// .small{
-//   font-size: 3vw;
-// }
-
-
-// .title {
-//   float: left;
-//   // position: absolute;
-//   top: 25%;
-//   left: 47%;
-//   right: 53%;
-//   font-size: 40px;
-//   text-align: center;
-// }
 .content{
-  // margin: 0 auto;
-  // padding-bottom: 10px;
   width: 300px;
   margin: 30px auto;
 }
@@ -226,4 +199,28 @@ th {
         0 0 15px rgba(209, 214, 215, 0.877), 0 0 15px rgb(209, 214, 215),
         0 0 15px rgb(209, 214, 215);
     }
+}
+
+.btn-sns.item {
+  display:none;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  color: #d8dcdc;
+  transform: translate(-50%, -100%);
+  font-size: 1.4rem;
+  line-height: 50px;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  letter-spacing: 0;
+  border-radius: 50%;  text-shadow: 0 0 5px #fff, 0 0 5px #fff, 0 0 5px #fff, 0 0 5px #fff, 0 0 5px #fff;
+}
+
+.btn-sns.item :hover {
+  text-shadow: 0 0 7px #fff, 0 0 7px #fff, 0 0 7px #fff, 0 0 7px #fff, 0 0 7px #fff, 0 0 7px #fff, 0 0 7px #fff, 0 0 7px #fff;
+}
+
+.btn-sns--twitter.item {
+  background: #1da1f2;
 }
