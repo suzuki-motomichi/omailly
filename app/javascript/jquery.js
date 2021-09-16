@@ -1,18 +1,48 @@
 let str = [
-  "思い出してみてください<br>",
-  "輝いていたあの頃を<br>",
-  "たくさんの方に使ってもらえた日々を<br>",
-  "そもそも使ってもらえなかったかもしれません<br>",
-  "思い出してくれて<br>",
+  "思い出してみてください",
+  "輝いていたあの頃を",
+  "たくさんの方に使ってもらえた日々を",
+  "そもそも使ってもらえなかったかもしれません",
+  "思い出してくれて",
   "ありがとう",
-  "さようなら",
 ];
 
+let str1 = [
+  "あ…",
+  "また来てくれたんですね",
+  "うれしいです",
+  "きっと喜んでいますよ。",
+  "知らんけど",
+  "でも、",
+  "ありがとう",
+];
+
+let str2 = [
+  "はじめまして",
+  "ご存知でしたか？",
+  "過去にあったんですって",
+  "記録よりも",
+  "記憶に残っていて",
+  "それでいいと思います",
+];
+
+let str3 = [
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+];
+
+const strWords = [str,str1];
+const arr = Math.floor(Math.random() * strWords.length);
+console.log(strWords[arr]);
 $(() => {
   $(".js-open").click(() => {
     $(document).ready(() => {
-      for (let i = 0; i < str.length; i++) {
-        $("#output").append("<div>" + str[i] + "</div>");
+      for (let i = 0; i < strWords[arr].length; i++) {
+        $("#output").append("<div>" + strWords[arr][i] + "</div>");
       }
       $("#output div").each(function (i) {
         $(this)
@@ -20,6 +50,11 @@ $(() => {
           .delay(2000 * i)
           .fadeIn(3000);
       });
+      {
+        setInterval(function() {
+          $('.item').fadeIn();
+        }, 15000);
+      };
     });
     $("#overlay, .modal-window").fadeIn();
   });
@@ -30,9 +65,12 @@ $(() => {
     .unbind()
     .click(() => {
       $("#overlay, .modal-window").fadeOut();
-      $("#output div").remove();
+      $("#output div, .item").remove();
     });
 });
+
+
+
 
 window.addEventListener("DOMContentLoaded", () => {
   let section = document.querySelector(".cherry-blossom-container");
