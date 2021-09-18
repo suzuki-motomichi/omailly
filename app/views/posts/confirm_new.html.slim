@@ -41,8 +41,10 @@ h1 内容の確認
       tr
         th= '享年'
       tr
-        td= "#{@post.last_day}年"
+        td= "#{@post.last_day}#{@post.status}"
         = f.hidden_field :last_day
+        = f.hidden_field :status
+
       tr
         th= '御説明'
       tr

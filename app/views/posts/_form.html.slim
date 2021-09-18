@@ -6,6 +6,7 @@
     .form-group
       = f.label '享年',class: 'form-label'
       = f.text_field :last_day, rows: 5, class: 'form-control', id: 'task_description',:placeholder => "0~9999"
+      = f.select :status, Post.statuses.keys, class: 'form-control btn btn-info'
     .form-group
       = f.label '内容',class: 'form-label'
       = f.text_area :content, rows: 5, class: 'form-control l3', id: 'task_description',:placeholder => "1~400文字"

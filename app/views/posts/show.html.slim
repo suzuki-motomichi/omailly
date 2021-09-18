@@ -4,42 +4,31 @@ h1 詳細
 .ihai
   .ihai_1
     .post-title
-      / =@post.title
       =simple_format(h(@post.title), {}, sanitize: false)
-  / =image_tag 'ihai.png', class: 'ihai_1' do
-  / .title =@post.title
 
 table.content
   tbody
     tr
       th= '享年'
     tr
-      td= "#{@post.last_day}年"
+      td= "#{@post.last_day}#{@post.status}"
     tr
       th= '御説明'
     tr
       td= simple_format(h(@post.content), {}, sanitize: false, wrapper_tag: "div")
-/ = link_to 'お参りする', "#"
 
 #overlay.overlay
-/! モーダルウィンドウ
+/ モーダルウィンドウ
 .modal-window
   = link_to "https://twitter.com/share?&url=", title: 'Twitter', target: :_blank, rel: 'noopener noreferrer', class: "btn-sns btn-sns--twitter item" do
     i.fab.fa-twitter.item
 
 
-  /! 閉じるボタン
+  / 閉じるボタン
   button.js-close.button-close やめとく
   #output.output.1
-  .output.2
-  .output.3
-  .output.4
-  .output.5
-  .output.6
-  .output.7
-  / = link_to 'Twitter', "", target: :_blank, rel: 'noopener noreferrer', class: "twitter-share"
 br/
-/! モーダルを開くボタン
+/ モーダルを開くボタン
 button.js-open.button-open.btn-border-gradient-wrap.btn-border-gradient-wrap--gold
   a.btn.btn-border-gradient
     span.btn-text-gradient--gold 御参り
