@@ -9,7 +9,6 @@ class PostsController < ApplicationController
   end
 
   def create
-    # binding.pry
     @post = Post.new(post_params)
 
     if params[:back].present?
@@ -18,8 +17,7 @@ class PostsController < ApplicationController
     end
 
     if @post.save
-      # binding.pry
-      redirect_to post_path(@post), success: '作成しました' # お墓作成部分ができたらそっちに飛ばす
+      redirect_to post_path(@post), success: '作成しました'
     else
       flash.now['danger'] = "作成できませんでした"
       render :new
@@ -33,7 +31,6 @@ class PostsController < ApplicationController
 
   def confirm_new
     @post = Post.new(post_params)
-    # binding.pry
     render :new unless @post.valid?
   end
 
