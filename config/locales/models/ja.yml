@@ -1,0 +1,19 @@
+ja:
+  activerecord:
+    models:
+      post:
+    attributes:
+      post:
+        title: 御名前
+        content: 御説明
+        last_day: 享年
+        submit: 確認
+  enums:
+    post:
+      status:
+        years: 年
+        month: ヵ月
+        day: 日
+        hours: 時間
+        minute: 分
+        seconds: 秒
