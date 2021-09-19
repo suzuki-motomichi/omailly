@@ -1,33 +1,4 @@
 h1 内容の確認
-
-/ .ihai
-/   .ihai_1
-/     .post-title
-/       / =@post.title
-/       =simple_format(h(@post.title), {}, sanitize: false)
-/   / =image_tag 'ihai.png', class: 'ihai_1' do
-/   / .title =@post.title
-
-/ table.content
-/   tbody.content_01
-/     tr
-/       th= 'タイトル'
-/       td= @post.title
-/     tr
-/       th= '享年'
-/       td= "#{@post.last_day}年"
-/     tr
-/       th= '内容'
-/       td= simple_format(h(@post.content), {}, sanitize: false, wrapper_tag: "div")
-/     tr
-/       th= '作成日'
-/       td= @post.created_at
-/     tr
-/       th= '更新日'
-/       td= @post.updated_at
-/       br/
-
-
 = form_with model: @post, local: true do |f|
   tbody
     tr
