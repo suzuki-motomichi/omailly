@@ -1,4 +1,6 @@
-h1 内容の確認
+- content_for(:title, t('.title'))
+
+h1 #{t('.title')}
 = form_with model: @post, local: true do |f|
   tbody
     tr

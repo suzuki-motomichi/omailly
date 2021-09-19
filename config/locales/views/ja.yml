@@ -1,12 +1,22 @@
 ja:
   defaults:
-    static_page:
+    index: 供養一覧
+    use: 使い方
+  static_pages:
+    top:
       new: 作成
       index: 一覧
   posts:
+    index:
+      title: 供養一覧
     new:
+      title: 新規登録
       post: 確認
     show:
-      title: 御名前
+      title: 詳細
       content: 御説明
       last_day: 享年
+    confirm_new:
+      title: 内容の確認
+      back: 戻る
+      post: 作成
