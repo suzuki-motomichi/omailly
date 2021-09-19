@@ -1,0 +1,12 @@
+ja:
+  defaults:
+    static_page:
+      new: 作成
+      index: 一覧
+  posts:
+    new:
+      post: 確認
+    show:
+      title: 御名前
+      content: 御説明
+      last_day: 享年

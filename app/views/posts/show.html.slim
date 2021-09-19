@@ -9,11 +9,11 @@ h1 詳細
 table.content
   tbody
     tr
-      th= '享年'
+      th= t('.title')
     tr
-      td= "#{@post.last_day}#{@post.status}"
+      td= "#{@post.last_day}#{@post.status_i18n}"
     tr
-      th= '御説明'
+      th= t('.content')
     tr
       td= simple_format(h(@post.content), {}, sanitize: false, wrapper_tag: "div")
 
