@@ -23,7 +23,7 @@ module ApplicationHelper
       },
       twitter: {
         site: '@Find_michi',
-        card: 'summary_large_image',
+        card: 'summary_large_image'
         # image: image_url('ogp_twitter_card.png')
       }
     }
