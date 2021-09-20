@@ -1,18 +1,16 @@
 - content_for(:title, t('.title'))
 
-h1 供養一覧
+h1 #{t('.title')}
 .btn-border-gradient-wrap.btn-border-gradient-wrap--gold
   = link_to new_post_path, class: 'btn btn-border-gradient t_1' do
-    span.btn-text-gradient--gold 新規作成
-
-/classは後からつける
+    span.btn-text-gradient--gold #{t('posts.new.title')}
 
 table.table
   thaed.td-default
     tr.tr-tl
-      th.name= '御名前'
-      th.content= '御説明'
-      th.yaer= '享年'
+      th.name= Post.human_attribute_name(:title)
+      th.content= Post.human_attribute_name(:content)
+      th.yaer= Post.human_attribute_name(:last_day)
   tbody.t-body
     =render @posts
 

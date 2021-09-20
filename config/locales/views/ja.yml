@@ -2,6 +2,7 @@ ja:
   defaults:
     index: 供養一覧
     use: 使い方
+    home: トップへ
   static_pages:
     top:
       new: 作成
@@ -16,6 +17,7 @@ ja:
       title: 詳細
       content: 御説明
       last_day: 享年
+      pray: 御参り
     confirm_new:
       title: 内容の確認
       back: 戻る

@@ -11,11 +11,11 @@ h1 #{t('.title')}
 table.content
   tbody
     tr
-      th= t('.title')
+      th= Post.human_attribute_name(:last_day)
     tr
       td= "#{@post.last_day}#{@post.status_i18n}"
     tr
-      th= t('.content')
+      th= Post.human_attribute_name(:content)
     tr
       td= simple_format(h(@post.content), {}, sanitize: false, wrapper_tag: "div")
 
@@ -33,14 +33,14 @@ br/
 / モーダルを開くボタン
 button.js-open.button-open.btn-border-gradient-wrap.btn-border-gradient-wrap--gold
   a.btn.btn-border-gradient
-    span.btn-text-gradient--gold 御参り
+    span.btn-text-gradient--gold #{t('.pray')}
 
 
 
 .btn-border-gradient-wrap-1.btn-border-gradient-wrap--silver.button.btn
   = link_to posts_path, class: 'btn btn-border-gradient t_1' do
-    span.btn-text-gradient--silver 一覧
+    span.btn-text-gradient--silver #{t('static_pages.top.index')}
 
 .btn-border-gradient-wrap-1.btn-border-gradient-wrap--silver.button.btn.t-1
   = link_to new_post_path, class: 'btn btn-border-gradient t_1' do
-    span.btn-text-gradient--silver 作成
+    span.btn-text-gradient--silver #{t('static_pages.top.new')}
