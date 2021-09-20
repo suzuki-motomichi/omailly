@@ -1,7 +1,9 @@
-h1 新規登録
+- content_for(:title, t('.title'))
+
+h1 #{t('.title')}
 
 .btn-border-gradient-wrap-1.btn-border-gradient-wrap--silver.button.btns.t-1
   a.btn.btn-border-gradient.t_1 href="/posts"
-    span.btn-text-gradient--silver 供養一覧
+    span.btn-text-gradient--silver #{t('posts.index.title')}
 
 = render partial: 'form', locals: { post: @post, post_button: t('.post') }

@@ -1,6 +1,5 @@
 class PraysController < ApplicationController
-  def new
-  end
+  def new; end
 
   def show; end
 
@@ -8,8 +7,6 @@ class PraysController < ApplicationController
   #   @post = Post.new(post_params)
   #   render :new unless @post.valid?
   # end
-
-  private
 
   # def post_params
   #   params.require(:post).permit(:title, :content, :last_day)

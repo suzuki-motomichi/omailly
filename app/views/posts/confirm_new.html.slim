@@ -1,4 +1,6 @@
-h1 内容の確認
+- content_for(:title, t('.title'))
+
+h1 #{t('.title')}
 = form_with model: @post, local: true do |f|
   tbody
     tr
@@ -10,14 +12,14 @@ h1 内容の確認
         = f.hidden_field :title
     table.content
       tr
-        th= '享年'
+        th= Post.human_attribute_name(:last_day)
       tr
         td= "#{@post.last_day}#{@post.status_i18n}"
         = f.hidden_field :last_day
         = f.hidden_field :status
 
       tr
-        th= '御説明'
+        th= Post.human_attribute_name(:content)
       tr
         td= simple_format(h(@post.content), {}, sanitize: false, wrapper_tag: "div")
         = f.hidden_field :content

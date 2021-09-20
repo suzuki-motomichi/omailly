@@ -19,14 +19,13 @@ class PostsController < ApplicationController
     if @post.save
       redirect_to post_path(@post), success: '作成しました'
     else
-      flash.now['danger'] = "作成できませんでした"
+      flash.now['danger'] = '作成できませんでした'
       render :new
     end
   end
 
   def show
     @post = Post.find(params[:id])
-
   end
 
   def confirm_new

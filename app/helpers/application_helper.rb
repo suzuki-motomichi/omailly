@@ -23,9 +23,15 @@ module ApplicationHelper
       },
       twitter: {
         site: '@Find_michi',
-        card: 'summary_large_image',
+        card: 'summary_large_image'
         # image: image_url('ogp_twitter_card.png')
       }
     }
+  end
+
+  def page_title(page_title = '')
+    base_title = "O'mailly"
+
+    page_title.empty? ? base_title : page_title + ' | ' + base_title
   end
 end
