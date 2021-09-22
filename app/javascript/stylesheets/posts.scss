@@ -98,50 +98,54 @@ th {
 
     .post-title {
       font-size: 1rem;
-      padding: 17%;
-    }
+      padding: 10%;
+
     .small{
-      font-size: 4rem;
-      width: 400px;
-      height: 280px;
-      padding: 6rem 2rem;
+      font-size: 3rem;
+      // width: 400px;
+      // height: 280px;
+      // padding: 6rem 2rem;
       margin: 0 auto;
     }
     .small-medium{
-      font-size: 3.4rem;
-      width: 400px;
-      height: 280px;
-      padding:5rem 4rem;
+      font-size: 2.4rem;
+      // width: 400px;
+      // height: 280px;
+      padding: 1rem;
       margin: 0 auto;
     }
     .medium{
       font-size: 3rem;
-      width: 400px;
-      height: 280px;
-      padding:2em 3rem;
+      // width: 400px;
+      // height: 280px;
+      // padding:2em 3rem;
       margin: 0 auto;
     }
     .medium-large{
       font-size: 2rem;
-      width: 400px;
-      height: 280px;
-      padding:3rem 4rem;
+      // width: 400px;
+      // height: 280px;
+      padding:3rem;
       margin: 0 auto;
     }
     .large{
-      font-size: 2.5rem;
-      width: 400px;
-      height: 280px;
-      padding:3rem 4rem;
+      font-size: 1.5rem;
+      // width: 400px;
+      // height: 280px;
+      padding: 3rem;
       margin: 0 auto;
     }
     .ex-large{
-      font-size: 1rem;
-      width: 400px;
-      height: 280px;
-      padding:3rem 4rem;
+      font-size: 2.5rem;
+      // width: 400px;
+      // height: 280px;
+      // padding:3rem 4rem;
       margin: 0 auto;
     }
+    .ex-ex-large{
+      font-size: 2rem;
+    }
+  }
   }
 }
 .content{
