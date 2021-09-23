@@ -1,5 +1,23 @@
+const { post } = require("jquery");
+
 $(document).ready(function(){
     $(".post-title").each(function() {
+    let men = $(".post-title").text().split("\n").length;
+
+    switch (men) {
+        case 1:
+            $(".post-title p").addClass("spd-0");
+        break;
+        case 2:
+            $(".post-title p").addClass("spd-1");
+        break;
+        // case 3:
+        //     $(".post-title p").addClass("spd-2");
+        // break;
+
+    }
+
+    console.log(men);
     let menu_len = $(".post-title p").text().replace(/\n/g, "");
     console.log(menu_len.length);
 
@@ -13,10 +31,9 @@ $(document).ready(function(){
         $(".post-title p").addClass("medium-large");
     }else if(20 < menu_len.length && menu_len.length <= 25){
         $(".post-title p").addClass("large");
-    }else if(25 < menu_len.length && menu_len.length <= 30){
+    }else(25 < menu_len.length && menu_len.length <= 30);{
         $(".post-title p").addClass("ex-large");
-    }else{
-        $(".post-title p").addClass("ex-ex-large");
         };
     });
     });
+
