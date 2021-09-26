@@ -93,12 +93,15 @@ GEM
     mail (2.7.1)
       mini_mime (>= 0.1.1)
     marcel (1.0.1)
+    mecab (0.996)
     meta-tags (2.15.0)
       actionpack (>= 3.2.0, < 6.2)
     method_source (1.0.0)
     mini_mime (1.1.1)
     minitest (5.14.4)
     msgpack (1.4.2)
+    natto (1.2.0)
+      ffi (>= 1.9.0)
     nio4r (2.5.8)
     nokogiri (1.12.4-x86_64-darwin)
       racc (~> 1.4)
@@ -255,7 +258,9 @@ DEPENDENCIES
   jbuilder (~> 2.7)
   jquery-rails
   listen (~> 3.3)
+  mecab
   meta-tags
+  natto
   pagy
   pg (~> 1.1)
   pry-rails

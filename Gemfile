@@ -33,6 +33,10 @@ gem 'ransack'
 gem 'rails-i18n'
 
 gem 'enum_help'
+
+gem 'natto'
+
+gem 'mecab'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
