@@ -2,7 +2,7 @@ require("@rails/ujs").start()
 require("@rails/activestorage").start()
 require("channels")
 require('jquery')
-require('jquery.js')
+require('pray.js')
 require('font.js')
 
 import 'bootstrap';

@@ -1,38 +1,39 @@
-$(document).ready(function(){
-  $(".post-title").each(function() {
-    var menu_len = $(this).html();
-    console.log(menu_len.length);
-    // switch(menu_len.length) {
-    //   case :
-    //   break;
-    // }
+const { post } = require("jquery");
 
+$(document).ready(function(){
+    $(".post-title").each(function() {
+    let men = $(".post-title").text().split("\n").length;
+
+    switch (men) {
+        case 1:
+            $(".post-title p").addClass("spd-0");
+        break;
+        case 2:
+            $(".post-title p").addClass("spd-1");
+        break;
+        // case 3:
+        //     $(".post-title p").addClass("spd-2");
+        // break;
+
+    }
+
+    console.log(men);
+    let menu_len = $(".post-title p").text().replace(/\n/g, "");
+    console.log(menu_len.length);
 
     if(1 < menu_len.length && menu_len.length <= 5){
-        $(this).addClass("small");
+        $(".post-title p").addClass("small");
     }else if(5 < menu_len.length && menu_len.length <= 10){
-        $(this).addClass("small-medium");
+        $(".post-title p").addClass("small-medium");
     }else if(10 < menu_len.length && menu_len.length <= 15){
-        $(this).addClass("medium");
+        $(".post-title p").addClass("medium");
     }else if(15 < menu_len.length && menu_len.length <= 20){
-        $(this).addClass("medium-large");
-    }else if(25 < menu_len.length && menu_len.length <= 30){
-        $(this).addClass("large");
-    }else if(30 < menu_len.length && menu_len.length <= 35){
-        // console.log(menu_len.length);
-    }else{
-        $(this).addClass("ex-large");
-      };
+        $(".post-title p").addClass("medium-large");
+    }else if(20 < menu_len.length && menu_len.length <= 25){
+        $(".post-title p").addClass("large");
+    }else(25 < menu_len.length && menu_len.length <= 30);{
+        $(".post-title p").addClass("ex-large");
+        };
     });
-  });
-
-  // $(document).ready(function(){
-  //   $(".post-title").each(function() {
-  //     var menu_len = $(this).html();
-  //     if(menu_len.length > 20){
-  //       $(this).addClass("large");
-  //     }
-  //     console.log(menu_len.length);
-  //     });
-  //   });
+    });
 
