@@ -5,7 +5,7 @@ ja:
     attributes:
       post:
         title: 御名前
-        content: 御説明
+        content: 御活躍
         last_day: 享年
         submit: 確認
   enums:
