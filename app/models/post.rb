@@ -1,5 +1,5 @@
 class Post < ApplicationRecord
-  validates :title, presence: true, length: { maximum: 35 }
+  validates :title, check_person_name: true, presence: true, length: { maximum: 35 }
   validates :content, presence: true, length: { maximum: 400 }
   validates :last_day, length: { maximum: 9999 }
 
