@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   include Pagy::Backend
   def index
-    @pagy, @posts = pagy(Post.all)
+    @pagy, @posts = pagy @q.result(distinct: true).order('created_at DESC')
   end
 
   def new
