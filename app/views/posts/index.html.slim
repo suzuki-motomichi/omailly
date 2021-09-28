@@ -8,7 +8,7 @@ h1 #{t('.title')}
 table.table
   thaed.td-default
     tr.tr-tl
-      th.name= Post.human_attribute_name(:title)
+      th.name= sort_link(@q, :title, Post.human_attribute_name(:title), default_order: :desc)
       th.content= Post.human_attribute_name(:content)
       th.yaer= Post.human_attribute_name(:last_day)
   tbody.t-body
