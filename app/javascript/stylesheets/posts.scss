@@ -89,63 +89,96 @@ th {
   text-align: center;
 
   .ihai_1 {
-  background-image: url("../images/ihai.png");
-  background-size: cover;
-  width: 512px;
-  height: 400px;
-  z-index: -1;
-  margin: 0 auto;
+    // スマホ
+    @media only screen and (max-width: 767px){
+      background-image: url("../images/responsive-ihai01.png");
+      background-size: contain;
+      width: auto;
+      height: 100%;
+      padding-top: 5.25%;
+      background-repeat: no-repeat;
+      background-position: center center;
+      z-index: -1;
+      margin: 0 auto;
 
-    .post-title {
-      font-size: 1rem;
-      padding: 10%;
+      .post-title {
+        font-size: 1rem;
+        padding: 30px 0 70px 0;
 
-    .small{
-      font-size: 3rem;
-      // width: 400px;
-      // height: 280px;
-      // padding: 6rem 2rem;
-      margin: 0 auto;
+        .small{
+          font-size: 2rem;
+          margin: 0 auto;
+          padding: 30px 0 50px 0;
+        }
+        .small-medium{
+          font-size: 1.8rem;
+          margin: 0 auto;
+        }
+        .medium{
+          font-size: 1.7rem;
+          margin: 0 auto;
+        }
+        .medium-large{
+          font-size: 1.4rem;
+          margin: 0 auto;
+        }
+        .large{
+          font-size: 1.3rem;
+          margin: 0 auto;
+          padding: 0px 70px 10px 70px;
+
+        }
+        .ex-large{
+          font-size: 1.2rem;
+          margin: 0 auto;
+        }
+      }
     }
-    .small-medium{
-      font-size: 2.4rem;
-      // width: 400px;
-      // height: 280px;
-      // padding: 1rem;
-      margin: 0 auto;
+    // PC
+    @media only screen and (min-width: 768px), print{
+    background-image: url("../images/ihai.png");
+    background-size: cover;
+    width: 512px;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: -1;
+    margin: 0 auto;
+
+      .post-title {
+        font-size: 1rem;
+        padding: 30px 0 70px 0;
+
+        .small{
+          font-size: 3rem;
+          margin: 0 auto;
+        }
+        .small-medium{
+          font-size: 2.4rem;
+          margin: 0 auto;
+        }
+        .medium{
+          font-size: 3rem;
+          margin: 0 auto;
+        }
+        .medium-large{
+          font-size: 2rem;
+          margin: 0 auto;
+          padding: 70px 50px;
+
+        }
+        .large{
+          font-size: 2.1rem;
+          margin: 0 auto;
+          padding: 55px;
+        }
+        .ex-large{
+          font-size: 2.2rem;
+          margin: 0 auto;
+          padding: 30px 40px 70px 40px;
+        }
+      }
     }
-    .medium{
-      font-size: 3rem;
-      // width: 400px;
-      // height: 280px;
-      // padding:2em 3rem;
-      margin: 0 auto;
-    }
-    .medium-large{
-      font-size: 2rem;
-      // width: 400px;
-      // height: 280px;
-      // padding:3rem;
-      margin: 0 auto;
-    }
-    .large{
-      font-size: 1.5rem;
-      // width: 400px;
-      // height: 280px;
-      // padding: 3rem;
-      margin: 0 auto;
-    }
-    .ex-large{
-      font-size: 2.2rem;
-      // width: 400px;
-      // height: 280px;
-      // padding:3rem 4rem;
-      margin: 0 auto;
-    }
-    .ex-ex-large{
-      font-size: 2rem;
-    }
-  }
   }
 }
 .spd-0 {
@@ -155,11 +188,6 @@ th {
 .spd-1 {
   padding: 3rem 2rem;
 }
-
-// .spd-2 {
-//   padding: 0rem 2rem;
-// }
-
 
 .content{
   width: 300px;
