@@ -1,7 +1,5 @@
-const { post } = require("jquery");
-
 $(document).ready(function(){
-    $(".post-title").each(function() {
+    $(".post-title p").each(function() {
     let men = $(".post-title").text().split("\n").length;
 
     switch (men) {
@@ -11,10 +9,6 @@ $(document).ready(function(){
         case 2:
             $(".post-title p").addClass("spd-1");
         break;
-        // case 3:
-        //     $(".post-title p").addClass("spd-2");
-        // break;
-
     }
 
     console.log(men);
@@ -31,7 +25,7 @@ $(document).ready(function(){
         $(".post-title p").addClass("medium-large");
     }else if(20 < menu_len.length && menu_len.length <= 25){
         $(".post-title p").addClass("large");
-    }else(25 < menu_len.length && menu_len.length <= 30);{
+    }else if(25 < menu_len.length && menu_len.length <= 30){
         $(".post-title p").addClass("ex-large");
         };
     });
