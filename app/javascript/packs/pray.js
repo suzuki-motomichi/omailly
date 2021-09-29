@@ -1,8 +1,7 @@
 let str = [
   "思い出してみてください",
   "輝いていたあの頃を",
-  "たくさん使ってもらえた日々を",
-  "そもそも使ってもらえなかったかもしれません",
+  "もしかしたら使ってもらえなかったかもしれません",
   "思い出してくれて",
   "ありがとう",
 ];
@@ -35,7 +34,16 @@ let str3 = [
   "な〜む〜",
 ];
 
-const strWords = [str,str1,str2,str3];
+let str4 = [
+  "お参り",
+  "してくれたんだ",
+  "ありがとう",
+  "その気持ちだけで",
+  "報われます",
+  "きっとね。"
+];
+
+const strWords = [str,str1,str2,str3,str4];
 const arr = Math.floor(Math.random() * strWords.length);
 console.log(strWords[arr]);
 $(() => {
