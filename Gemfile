@@ -36,7 +36,7 @@ gem 'enum_help'
 
 gem 'natto'
 
-gem 'mecab'
+gem 'mecab', '0.996'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 

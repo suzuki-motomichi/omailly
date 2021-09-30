@@ -103,8 +103,6 @@ GEM
     natto (1.2.0)
       ffi (>= 1.9.0)
     nio4r (2.5.8)
-    nokogiri (1.12.4-x86_64-darwin)
-      racc (~> 1.4)
     nokogiri (1.12.4-x86_64-linux)
       racc (~> 1.4)
     pagy (4.11.0)
@@ -258,7 +256,7 @@ DEPENDENCIES
   jbuilder (~> 2.7)
   jquery-rails
   listen (~> 3.3)
-  mecab
+  mecab (= 0.996)
   meta-tags
   natto
   pagy
