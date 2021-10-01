@@ -1,6 +1,6 @@
 FROM ruby:2.7.3
 
-# ENV RAILS_ENV=production
+ENV RAILS_ENV=production
 
 RUN curl https://deb.nodesource.com/setup_12.x | bash
 RUN curl https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
