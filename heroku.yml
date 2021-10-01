@@ -3,5 +3,9 @@ build:
     web: Dockerfile
   config:
     WORKDIR: app
+    NODE_ENV: production
+    RAILS_ENV: production
+    RAILS_MASTER_KEY: $RAILS_MASTER_KEY
+    SECRET_KEY_BASE: $SECRET_KEY_BASE
 run:
   web: bundle exec puma -C config/puma.rb

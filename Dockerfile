@@ -1,6 +1,6 @@
 FROM ruby:2.7.3
 
-ENV RAILS_ENV=production
+# ENV RAILS_ENV=production
 
 RUN apt-get update -qq && apt-get install -y nodejs postgresql-client
 
