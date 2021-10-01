@@ -1,6 +1,8 @@
 FROM ruby:2.7.3
 
 ENV RAILS_ENV=production
+ENV NODE_ENV=production
+ENV SECRET_KEY_BASE=$SECRET_KEY_BASE
 
 RUN curl https://deb.nodesource.com/setup_12.x | bash
 RUN curl https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
@@ -12,3 +14,4 @@ WORKDIR /app
 COPY . /app
 
 RUN bundle install --path vendor/bundle
+RUN bundle exec rails assets:precompile
