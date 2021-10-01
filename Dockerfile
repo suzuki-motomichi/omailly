@@ -11,8 +11,21 @@ RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources
 
 RUN apt-get update -qq && apt-get install -y nodejs yarn postgresql-client
 
+# mecab
+RUN apt-get install -y mecab libmecab-dev mecab-ipadic-utf8
+
+# neologd
+RUN git clone --depth 1 https://github.com/neologd/mecab-ipadic-neologd.git
+RUN ./mecab-ipadic-neologd/bin/install-mecab-ipadic-neologd -n -y
+RUN echo `mecab-config --dicdir`"/mecab-ipadic-neologd"
+
 WORKDIR /app
+
+# copy
+RUN mkdir dic
+RUN cp -rp `mecab-config --dicdir`"/mecab-ipadic-neologd" dic/
 COPY . /app
 
 RUN bundle install --path vendor/bundle
-RUN bundle exec rails assets:precompile
+
+# RUN bundle exec rails assets:precompile
