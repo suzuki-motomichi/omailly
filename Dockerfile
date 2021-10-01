@@ -1,7 +1,8 @@
 FROM ruby:2.7.3
 
-ENV RAILS_ENV=production
 ENV NODE_ENV=production
+ENV RAILS_ENV=production
+ENV RAILS_MASTER_KEY=$RAILS_MASTER_KEY
 ENV SECRET_KEY_BASE=$SECRET_KEY_BASE
 
 RUN curl https://deb.nodesource.com/setup_12.x | bash
