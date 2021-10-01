@@ -12,4 +12,3 @@ WORKDIR /app
 COPY . /app
 
 RUN bundle install --path vendor/bundle
-RUN bundle exec rails assets:precompile
