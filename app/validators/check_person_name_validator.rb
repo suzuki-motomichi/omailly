@@ -9,7 +9,7 @@ class CheckPersonNameValidator < ActiveModel::EachValidator
   private
 
   def tokenize(value)
-    nm = Natto::MeCab.new("-d #{Rails.root.join('dic/mecab-ipadic-neologd')} -u #{Rails.root.join('dic/userdic/user_dic_omailly.dic')}")
+    nm = Natto::MeCab.new("-d #{Rails.root.join('dic/mecab-ipadic-neologd')}")
     names = []
     nm.parse(value) do |n|
       names << n.surface if n.feature.split(',')[2] == '人名'

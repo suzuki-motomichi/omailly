@@ -23,7 +23,7 @@ echo `mecab-config --dicdir`"/mecab-ipadic-neologd"
 WORKDIR /app
 
 # copy
-RUN mkdir -p dic
+RUN mkdir dic
 RUN cp -rp `mecab-config --dicdir`"/mecab-ipadic-neologd" dic/
 COPY . /app
 
