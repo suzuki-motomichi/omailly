@@ -24,5 +24,5 @@ h1 #{t('.title')}
         td= simple_format(h(@post.content), {}, sanitize: false, wrapper_tag: "div")
         = f.hidden_field :content
 
-  = f.submit t('defaults.back'), name: 'back', class: 'btns btn-text-gradient--silver m-3'
-  = f.submit t('defaults.create'), class: 'btns btn-text-gradient--gold m-3'
+  = f.submit t('defaults.back'), name: 'back', class: 'btns back m-3'
+  = f.submit t('defaults.create'), class: 'btns send m-3'
