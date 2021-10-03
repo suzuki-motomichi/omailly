@@ -11,10 +11,11 @@ module ApplicationHelper
       canonical: request.original_url,
       icon: [
         { href: image_url('favicon.png') },
-        { href: image_url('favicon.png'), rel: 'apple-touch-icon', sizes: '180x180', type: 'image/png' },
+        { href: image_url('favicon.png'), rel: 'apple-touch-icon', sizes: '180x180', type: 'image/jpg' }
       ],
       og: {
-        site_name: :title,
+        site_name: :site,
+        title: :title,
         description: :description,
         url: request.original_url,
         image: image_url('top-image.png'),
