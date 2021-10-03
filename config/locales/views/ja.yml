@@ -3,6 +3,9 @@ ja:
     index: 供養一覧
     use: 使い方
     home: トップへ
+    search: 検索
+    back: 戻る
+    create: 作成
   static_pages:
     top:
       new: 作成
@@ -17,7 +20,7 @@ ja:
       title: 詳細
       content: 御活躍
       last_day: 享年
-      pray: 御参り
+      prays: 御参り
     confirm_new:
       title: 内容の確認
       back: 戻る
