@@ -8,7 +8,10 @@ th {
 .table{
   margin: 0 auto;
   text-align: center;
-  width: 65%;
+  width: 90%;
+  @media only screen and (min-width: 767px){
+    width: 65%;
+  }
 
   .td-default{
     display: block;
@@ -43,7 +46,7 @@ th {
       text-decoration: none;
       color: #eafc9c;
       font-weight: bold;
-      padding: 10px;
+      padding: 10px 0;
       display: block;
     }
     .tty {
