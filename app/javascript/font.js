@@ -11,9 +11,7 @@ $(document).ready(function(){
         break;
     }
 
-    console.log(men);
     let menu_len = $(".post-title p").text().replace(/\n/g, "");
-    console.log(menu_len.length);
 
     if(0 < menu_len.length && menu_len.length <= 5){
         $(".post-title p").addClass("small");
