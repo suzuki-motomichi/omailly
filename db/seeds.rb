@@ -7,9 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Post.create(
   [
-    { title: "O'MAILLY", last_day: 2, status: 1, content: "クソアプリです"},
-    { title: "Internet\n"+"Explorer", last_day: 2022, status: 0, content: "さようなら"},
-    { title: "ガングロギャル男", last_day: 0, status: 0, content: "高校生の時やってたわ"},
-    { title: "ひぐらしの\n"+"なく頃に 卒", last_day: 2021, status: 0, content: "業は面白かったです"}
+    { title: "O'MAILLY", last_day: 2, status: 1, content: 'クソアプリです' },
+    { title: "Internet\n" + 'Explorer', last_day: 2022, status: 0, content: 'さようなら' },
+    { title: 'ガングロギャル男', last_day: 0, status: 0, content: '高校生の時やってたわ' },
+    { title: "ひぐらしの\n" + 'なく頃に 卒', last_day: 2021, status: 0, content: '業は面白かったです' }
   ]
 )
