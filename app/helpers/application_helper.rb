@@ -2,11 +2,11 @@ module ApplicationHelper
   def default_meta_tags
     {
       site: "O'MAILLY",
-      title: 'オマイリー',
+      title: "O'MAILLY で供養しましょう",
       reverse: true,
       charset: 'utf-8',
       separator: '|',
-      description: 'すでに終わっていたり、オワコンに近いものを勝手にサービスを終わらせるサービスです',
+      description: 'すでに終わっていたり、オワコンに近いものを勝手にサービスを終わらせるサービスです。壊れていても構いません。',
       keywords: 'お参り,オマイリー,Omailly,おまいり,オワコン',
       canonical: request.original_url,
       icon: [
