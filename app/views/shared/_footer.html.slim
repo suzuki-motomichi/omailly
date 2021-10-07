@@ -1,9 +1,15 @@
 footer#footer
-  .container
     .row
       .col-12.text-center.mt-5
-        p.copyright
-          = link_to "お問い合わせ", "https://docs.google.com/forms/d/e/1FAIpQLSfzvOGELzNpI4SaERLcTXr_8evrDk2-15dmEpC7bzaVzaYU_g/viewform?embedded=true", class: "copylight-link"
-          | | #{link_to "利用規約",terms_path, class: "copylight-link"} | #{link_to "プライバシーポリシー", privacy_path, class: "copylight-link"}
-          br/
-          p.© 2021 omailly
+        div
+          = link_to 'プライバシーポリシー', privacy_path,class: 'footer_link'
+        div
+          = link_to '利用規約', terms_path ,class: 'footer_link'
+        div
+          = link_to "https://docs.google.com/forms/d/e/1FAIpQLSfzvOGELzNpI4SaERLcTXr_8evrDk2-15dmEpC7bzaVzaYU_g/viewform?embedded=true", class: 'footer_link' do
+            p.'お問い合わせ
+          p.copyright
+            = link_to "https://twitter.com/share?&url=https://omailly.herokuapp.com/&text=OMAILLYは既に終了してたり、オワコンに近いモノやサービスを勝手に終わらせるサービスです。&hashtags=OMAILLY,オマイリー,お参り&lang=ja", title: 'Twitter', target: :_blank, rel: 'noopener noreferrer', class: "twitter btn-tw-sns shere", onfocus:"this.blur();" do
+              i.fab.fa-twitter
+
+            p.© 2021 O'MAILLY

@@ -271,3 +271,28 @@ th {
 .btn-sns--twitter.item {
   background: #1da1f2;
 }
+
+.btn-tw-sns {
+  color: #1da1f2;
+  font-size: small;
+}
+  .shere{
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.5;
+    position: relative;
+    display: inline-block;
+    padding: 0.5rem;
+    margin: 10px;
+    cursor: pointer;
+    user-select: none;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    color: #1da1f2;
+  }
+
+.footer_link {
+  color: rgb(170, 169, 169);
+}
