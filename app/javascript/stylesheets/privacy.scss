@@ -5,3 +5,19 @@
   border: 6px double white;
   margin-top: 1.3vh;
 }
+.wrap-terms{
+  .terms {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 95%;
+    h1{
+      font-size: 1.6rem;
+    }
+    h2{
+      font-size: 1.2rem;
+    }
+    p{
+      font-size: 0.8rem;
+    }
+  }
+}
