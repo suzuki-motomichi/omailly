@@ -25,7 +25,7 @@ module ApplicationHelper
       twitter: {
         site: '@Find_michi',
         card: 'summary_large_image',
-        image: image_url('top-image.png')
+        # image: image_url('top-image.png')
       }
     }
   end

@@ -22,8 +22,10 @@ table.content
 #overlay.overlay
 / モーダルウィンドウ
 .modal-window
-  = link_to "https://twitter.com/share?&url=https://www.omailly.jp/posts/#{@post.id}&text=【#{@post.title}】を、供養してあげました。&hashtags=OMAILLY,オマイリー,お参り&lang=ja", title: 'Twitter', target: :_blank, rel: 'noopener noreferrer', class: "btn-sns btn-sns--twitter item" do
-    i.fab.fa-twitter.item
+  -if @post.id
+    - set_meta_tags og: {image: "https://res.cloudinary.com/dwrux4gbe/image/upload/l_text:New%20Tegomin_18:#{@post.title},co_rgb:fff/v1633673495/ws5fmftsv4dukvohhp8q.png" },twitter: {card: 'summary_large_image'}
+    = link_to "https://twitter.com/share?&url=https://www.omailly.jp/posts/#{@post.id}&text=【#{@post.title}】を、供養してあげました。&hashtags=OMAILLY,オマイリー,お参り&lang=ja", title: 'Twitter', target: :_blank, rel: 'noopener noreferrer', class: "btn-sns btn-sns--twitter item" do
+      i.fab.fa-twitter.item
 
 
   / 閉じるボタン
