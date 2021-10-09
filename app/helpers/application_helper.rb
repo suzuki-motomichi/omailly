@@ -6,7 +6,7 @@ module ApplicationHelper
       reverse: true,
       charset: 'utf-8',
       separator: '|',
-      description: 'すでに終わっていたり、オワコンに近いものを勝手にサービスを終わらせるサービスです。壊れていても構いません。',
+      description: 'すでに終わっていたり、オワコンに近いモノやサービスを勝手に終わらせるサービスです。壊れていても構いません。',
       keywords: 'お参り,オマイリー,Omailly,おまいり,オワコン',
       canonical: request.original_url,
       icon: [
