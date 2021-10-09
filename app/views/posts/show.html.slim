@@ -1,4 +1,5 @@
 - content_for(:title, @post.title)
+- set_meta_tags og: {image: "https://res.cloudinary.com/hwztlev01/image/upload/l_text:Sawarabi%20Mincho_45:#{@post.title},co_rgb:fff,w_390,h_175,c_fit/v1633674371/ihai_jqmrnn.png" },twitter: {card: 'summary_large_image'}
 
 h1 #{t('.title')}
 .nav.justify-content-end
@@ -22,7 +23,7 @@ table.content
 #overlay.overlay
 / モーダルウィンドウ
 .modal-window
-  = link_to "https://twitter.com/share?&url=https://omailly.herokuapp.com/posts/#{@post.id}&text=【#{@post.title}】を、供養してあげました。&hashtags=OMAILLY,オマイリー,お参り&lang=ja", title: 'Twitter', target: :_blank, rel: 'noopener noreferrer', class: "btn-sns btn-sns--twitter item" do
+  = link_to "https://twitter.com/share?&url=https://omailly.jp/posts/#{@post.id}&text=【#{@post.title}】を、供養してあげました。&hashtags=OMAILLY,オマイリー,お参り&lang=ja", title: 'Twitter', target: :_blank, rel: 'noopener noreferrer', class: "btn-sns btn-sns--twitter item" do
     i.fab.fa-twitter.item
 
 

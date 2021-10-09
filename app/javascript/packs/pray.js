@@ -61,7 +61,7 @@ $(() => {
       {
         setInterval(function() {
           $('.item').fadeIn();
-        }, 15000);
+        }, 13000);
       };
     });
     $("#overlay, .modal-window").fadeIn();
