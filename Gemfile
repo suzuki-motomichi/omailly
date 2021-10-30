@@ -22,11 +22,14 @@ gem 'pagy'
 gem 'rails-i18n'
 gem 'ransack'
 gem 'slim-rails'
+gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'pry-rails'
   gem 'rspec-rails', '~> 5.0.0'
+  gem 'capybara'
+  gem 'webdrivers'
 end
 
 group :development do
