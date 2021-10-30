@@ -3,13 +3,13 @@
     = render 'shared/error_messages', object: f.object
     .form-group
       = f.label :title, class: 'form-label'
-      = f.text_area :title, class: 'form-control l2', id: 'post_name',:placeholder => "1~30文字内\n(改行2回まで)"
+      = f.text_area :title, class: 'form-control l2', id: 'post_title',:placeholder => "1~30文字内\n(改行2回まで)"
     .form-group
       = f.label :last_day, class: 'form-label'
-      = f.text_field :last_day, rows: 5, class: 'form-control', id: 'task_description',:placeholder => "0~9999"
+      = f.text_field :last_day, rows: 5, class: 'form-control', id: 'post_last_day',:placeholder => "0~9999"
       = f.select :status, Post.statuses.keys.map { |k| [I18n.t("enums.post.status.#{k}"), k]}, class: 'form-control btn btn-info'
     .form-group
       = f.label :content, class: 'form-label'
-      = f.text_area :content, class: 'form-control l3', id: 'task_description',:placeholder => "1~200文字"
+      = f.text_area :content, class: 'form-control l3', id: 'post_content',:placeholder => "1~200文字"
     = f.submit post_button, class: 'btns send m-3'
     = javascript_pack_tag 'return'
