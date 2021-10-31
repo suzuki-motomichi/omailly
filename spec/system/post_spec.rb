@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'UserSessions', type: :system do
+  let(:post) { create(:post) }
   describe '投稿' do
     context 'フォームの入力値が正常' do
       it '確認ページが正しく表示されること' do
@@ -62,23 +63,15 @@ RSpec.describe 'UserSessions', type: :system do
       end
     end
   end
-end
 
-
-describe '' do
-  context 'フォームの入力値が正常' do
-    it '確認ページが正しく表示されること' do
-      visit new_post_path
-      title = '確認ページのテスト'
-      last_day = Faker::Number.between(from: 1, to: 9999)
-      content = Faker::Games::Pokemon.name
-      fill_in 'post_title', with: title
-      fill_in 'post_last_day', with: last_day
-      fill_in 'post_content', with: content
-      click_button '確認'
-      expect(page).to have_content(title)
-      expect(page).to have_content(last_day)
-      expect(page).to have_content(content)
+  describe '詳細' do
+    context 'フォームの入力値が正常' do
+      it '詳細ページが正しく表示されること' do
+        visit posts_path(post)
+        click_on post.title
+        expect(page).to have_content(post.title)
+        expect(page).to have_content(post.last_day)
+        expect(page).to have_content(post.content)
       end
     end
   end
