@@ -1,7 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'UserSessions', type: :system do
-  let(:post) { create(:post) }
+RSpec.describe 'Posts', type: :system do
   describe '投稿' do
     context 'フォームの入力値が正常' do
       it '確認ページが正しく表示されること' do
@@ -37,7 +36,7 @@ RSpec.describe 'UserSessions', type: :system do
       end
     end
 
-    context '確認ページへのアクセスが失敗する' do
+    context 'フォームが未入力' do
       it '御名前が未入力の場合失敗すること' do
         visit new_post_path
         title = ''
@@ -47,32 +46,31 @@ RSpec.describe 'UserSessions', type: :system do
         fill_in 'post_last_day', with: last_day
         fill_in 'post_content', with: content
         click_button '確認'
-        expect(page).to have_content('御名前を入力してください'), '御名前が入力されていません'
+        expect(page).to have_content('御名前を入力してください')
       end
 
-      it '御説明が未入力の場合失敗すること' do
+      it '御活躍が未入力の場合失敗すること' do
         visit new_post_path
-        title = '投稿のテスト'
+        title = 'タイトル'
         last_day = Faker::Number.between(from: 1, to: 9999)
         content = ''
         fill_in 'post_title', with: title
         fill_in 'post_last_day', with: last_day
         fill_in 'post_content', with: content
         click_button '確認'
-        expect(page).to have_content('御活躍を入力してください'), '御活躍が入力されていません'
+        expect(page).to have_content('御活躍を入力してください')
       end
     end
   end
 
   describe '詳細' do
-    context 'フォームの入力値が正常' do
-      it '詳細ページが正しく表示されること' do
-        visit posts_path(post)
-        click_on post.title
-        expect(page).to have_content(post.title)
-        expect(page).to have_content(post.last_day)
-        expect(page).to have_content(post.content)
-      end
+    let(:post) { create(:post) }
+    it '詳細ページが正しく表示されること' do
+      visit posts_path(post)
+      click_on post.title
+      expect(page).to have_content(post.title)
+      expect(page).to have_content(post.last_day)
+      expect(page).to have_content(post.content)
     end
   end
 end
