@@ -10,6 +10,6 @@
       = f.select :status, Post.statuses.keys.map { |k| [I18n.t("enums.post.status.#{k}"), k]}, class: 'form-control btn btn-info'
     .form-group
       = f.label :content, class: 'form-label'
-      = f.text_area :content, class: 'form-control l3', id: 'post_content',:placeholder => "1~200文字", :maxlength => '9999'
+      = f.text_area :content, class: 'form-control l3', id: 'post_content',:placeholder => "1~200文字"
     = f.submit post_button, class: 'btns send m-3'
     = javascript_pack_tag 'return'
