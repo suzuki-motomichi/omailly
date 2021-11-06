@@ -1,30 +1,52 @@
-# Use the latest 2.1 version of CircleCI pipeline process engine.
-# See: https://circleci.com/docs/2.0/configuration-reference
 version: 2.1
 
-# Orbs are reusable packages of CircleCI configuration that you may share across projects, enabling you to create encapsulated, parameterized commands, jobs, and executors that can be used across multiple projects.
-# See: https://circleci.com/docs/2.0/orb-intro/
 orbs:
-  ruby: circleci/ruby@0.1.2
+  ruby: circleci/ruby@1.1.3
+  node: circleci/node@4.5.1
 
-# Define a job to be invoked later in a workflow.
-# See: https://circleci.com/docs/2.0/configuration-reference/#jobs
 jobs:
   build:
     docker:
-      - image: circleci/ruby:2.6.3-stretch-node
-    executor: ruby/default
+      - image: cimg/ruby:2.7.3-node
     steps:
       - checkout
-      - run:
-          name: Which bundler?
-          command: bundle -v
-      - ruby/bundle-install
+      - ruby/install-deps
+      - node/install-packages:
+          pkg-manager: yarn
 
-# Invoke jobs via workflows
-# See: https://circleci.com/docs/2.0/configuration-reference/#workflows
+  test:
+    docker:
+      - image: circleci/ruby:2.7.3-node
+        environment:
+          RAILS_ENV: test
+      - image: circleci/postgres:9.3
+        environment:
+          POSTGRES_USER: omailly
+          # POSTGRES_HOST_AUTH_METHOD: trust
+          POSTGRES_DB: omailly_test
+    working_directory: ~/omailly
+    steps:
+      - checkout
+      - ruby/install-deps
+      - node/install-packages:
+          pkg-manager: yarn
+      - run:
+          name: Watting stand up database
+          command: |
+            dockerize -wait \
+            tcp://127.0.0.1:5432 -timeout 10m
+      - run: mv ./config/database.ci.yml ./config/database.yml
+      - run:
+          name: Database setup
+          command: |
+            bundle exec rails db:create db:migrate db:seed
+      - ruby/rspec-test
+      - ruby/rubocop-check
+
 workflows:
-  sample: # This is the name of the workflow, feel free to change it to better match your workflow.
-    # Inside the workflow, you define the jobs you want to run.
+  build_and_test:
     jobs:
       - build
+      - test:
+          requires:
+            - build
