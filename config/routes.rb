@@ -6,5 +6,6 @@ Rails.application.routes.draw do
 
   resources :posts do
     post :confirm, action: :confirm_new, on: :new
+    post 'likes', to: 'posts#likes'
   end
 end

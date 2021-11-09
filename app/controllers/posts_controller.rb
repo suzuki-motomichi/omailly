@@ -33,6 +33,12 @@ class PostsController < ApplicationController
     render :new unless @post.valid?
   end
 
+  def likes
+    @post = Post.find(params[:post_id])
+    @like = @post.likes + 1
+    @post.update(likes: @like)
+  end
+
   private
 
   def post_params
