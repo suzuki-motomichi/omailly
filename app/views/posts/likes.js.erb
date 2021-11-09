@@ -1,0 +1,1 @@
+$("#js-post-likes-<%= @post.id %>").replaceWith("<span id=js-post-likes-" + <%= j(@post.id) %> + ">" + <%= j(@post.likes) %> + "</span>");
