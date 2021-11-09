@@ -20,6 +20,10 @@ table.content
     tr
       td= simple_format(h(@post.content), {}, sanitize: false, wrapper_tag: "div")
 
+= link_to post_likes_path(@post), class: "like_button", method: :post, remote: true do
+  button.fas.fa-pray
+span id="js-post-likes-#{@post.id}" = @post.likes
+
 #overlay.overlay
 / モーダルウィンドウ
 .modal-window
