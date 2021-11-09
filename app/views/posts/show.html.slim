@@ -23,7 +23,6 @@ table.content
 = link_to post_likes_path(@post), class: "like_button", method: :post, remote: true do
   button.fas.fa-pray
 span id="js-post-likes-#{@post.id}" = @post.likes
-span.pray
 
 #overlay.overlay
 / モーダルウィンドウ
