@@ -23,6 +23,7 @@ gem 'rails-i18n'
 gem 'ransack'
 gem 'slim-rails'
 gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
+gem 'sorcery'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
