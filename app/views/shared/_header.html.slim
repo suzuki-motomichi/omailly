@@ -11,5 +11,10 @@ header
             = link_to (t'defaults.use'), description_path, class: 'nav-link'
           li.nav-item
             = link_to (t'defaults.index'), posts_path, class: 'nav-link'
+          li.nav-item
+            - if logged_in?
+              = link_to 'ログアウト', logout_path, class: 'nav-link', method: :delete
+            - else
+              = link_to 'ログイン', login_path, class: 'nav-link'
           li.
             = render 'shared/search', url: posts_path

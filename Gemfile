@@ -23,6 +23,7 @@ gem 'pagy'
 gem 'rails-i18n'
 gem 'ransack'
 gem 'slim-rails'
+gem 'sorcery'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
