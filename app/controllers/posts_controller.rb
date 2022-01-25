@@ -1,11 +1,16 @@
 class PostsController < ApplicationController
+  skip_before_action :require_login, only: %i[index new show]
   include Pagy::Backend
   def index
     @pagy, @posts = pagy @q.result(distinct: true).order('created_at DESC')
   end
 
   def new
-    @post = Post.new
+    if logged_in?
+      @post = Post.new
+    else
+      redirect_to posts_path, danger: "作成にはログインが必要です"
+    end
   end
 
   def create
