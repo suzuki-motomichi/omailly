@@ -1,0 +1,23 @@
+- content_for(:title, t('.title'))
+
+.container
+  .col-md-10.offset-md-1.col-lg-8.offset-lg-2
+    h1= content_for(:title, t('users.new.signup'))
+    = form_with model: @user, local: true do |f|
+      = render 'shared/error_messages',  object: f.object
+      .form-group
+        = f.label :name
+        = f.text_field :name, class:"form-control"
+      .form-group
+        = f.label :email
+        = f.text_field :email, class:"form-control"
+      .form-group
+        = f.label :password
+        = f.password_field :password, class:"form-control"
+      .form-group
+        = f.label :password_confirmation
+        = f.password_field :password_confirmation, class:"form-control"
+      .btn-border-gradient-wrap-1.btn-border-gradient-wrap--silver.button.btns.t-1
+        = f.submit User.human_attribute_name(:register), class:"btn btn-border-gradient t_1"
+    .text-center
+      = link_to t('.login'), login_path, class: "text-white"
