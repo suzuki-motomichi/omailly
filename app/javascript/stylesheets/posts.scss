@@ -306,3 +306,17 @@ th {
   color: #eeda9a;
   font-size: 3rem;
 }
+
+.chat {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 500px;
+  margin: 20px auto 0 auto;
+  height: 300px;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  border: solid 1px #aaa;
+  padding: 8px;
+  padding-top: 6px;
+}
