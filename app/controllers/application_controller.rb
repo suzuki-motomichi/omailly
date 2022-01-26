@@ -9,4 +9,8 @@ class ApplicationController < ActionController::Base
     @q = Post.ransack(params[:q])
     @search = @q.result(distinct: true)
   end
+
+  def not_authenticated
+    redirect_to main_app.login_path, alert: 'ログインor登録済みの方が利用できます。'
+  end
 end
