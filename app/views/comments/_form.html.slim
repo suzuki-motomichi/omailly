@@ -1,0 +1,6 @@
+.row.mb-3
+  .col-lg-8.offset-lg-2
+    = form_with model: comment, url: [post, comment], local: true do |f|
+      = render 'shared/error_messages', object: f.object
+      = f.text_area :body, class: 'form-control mb-3', id: 'js-new-comment-body', row: 4, placeholder: "お悔やみ申しあげます。"
+      = f.submit '投稿'

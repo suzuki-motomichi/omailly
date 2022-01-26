@@ -7,14 +7,14 @@ class PostsController < ApplicationController
 
   def new
     if logged_in?
-      @post = Post.new
+      @post = current_user.posts.new
     else
       redirect_to posts_path, danger: "作成にはログインが必要です"
     end
   end
 
   def create
-    @post = Post.new(post_params)
+    @post = current_user.posts.new(post_params)
 
     if params[:back].present?
       render :new
@@ -31,10 +31,12 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    @comment = Comment.new
+    @comments = @post.comments.order(created_at: :desc)
   end
 
   def confirm_new
-    @post = Post.new(post_params)
+    @post = current_user.posts.new(post_params)
     render :new unless @post.valid?
   end
 

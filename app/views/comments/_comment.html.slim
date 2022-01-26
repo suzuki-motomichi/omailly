@@ -1,0 +1,8 @@
+tr id="comment-#{comment.id}" 
+  td
+    div id="js-comment-#{comment.id}" class= "text-white" 
+      = simple_format(comment.body)
+    div id="js-textarea-comment-box-#{comment.id}" style=("display: none;") 
+      textarea.form-control.mb-1 id="js-textarea-comment-#{comment.id}" = comment.body
+    .border-bottom
+
