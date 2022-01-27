@@ -5,7 +5,7 @@
       = f.label :title, class: 'form-label'
       = f.text_area :title, class: 'form-control l2', id: 'post_title',:placeholder => "1~30文字内\n(改行2回まで)", :maxlength => '30'
     .form-group
-      = f.label :last_day, class: 'form-label'
+      .form-label 享年(期間)
       = f.text_field :last_day, rows: 5, class: 'form-control', id: 'post_last_day', :placeholder => "0~9999", :maxlength => '4'
       = f.select :status, Post.statuses.keys.map { |k| [I18n.t("enums.post.status.#{k}"), k]}, class: 'form-control btn btn-info'
     .form-group
