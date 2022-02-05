@@ -11,9 +11,12 @@ table.table
       th.name= Post.human_attribute_name(:title)
       th.content= Post.human_attribute_name(:content)
       th.yaer= Post.human_attribute_name(:last_day)
-  tbody.t-body
-    =render @posts
+  tbody#records_table.t-body
+    #index-page-scroll.container.w-75
+      #pageScroll data-page="" 
+        - cache @posts do
+          = render @posts
+#div_next_link
+  = render 'shared/next_link'
+= javascript_pack_tag 'pages/page_scroll', defer: true
 
-.btn-border-gradient-wrap.btn-border-gradient-wrap--gold
-  .btn-text-gradient--silver
-    == pagy_nav(@pagy)
