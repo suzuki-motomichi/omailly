@@ -16,17 +16,11 @@ const router = new VueRouter({
       component: Ranking  }
   ]
 })
+Vue.use(VueRouter)
 
 export default {
-  components: {
-    Ranking
-  },
-  data: function () {
-    return {
-      message: "Hello Vue!"
-    }
-  }
-};
+  router
+}
 </script>
 
 <style scoped>
