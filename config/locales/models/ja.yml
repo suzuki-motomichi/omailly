@@ -4,6 +4,7 @@ ja:
       post:
     attributes:
       post:
+        rank: 順位
         title: 御名前
         content: 御活躍
         last_day: 享年
