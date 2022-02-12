@@ -1,3 +1,4 @@
+/ #bg v-bind:style=("{ backgroundColor: color}")
 ul.leaf
   li
   li
@@ -13,11 +14,25 @@ ul.leaf
   .ihai
     = image_pack_tag "top.png", class: 'img-fluid'
 
-.btn-border-gradient-wrap.btn-border-gradient-wrap--gold
-  = link_to new_post_path, class:'btn btn-border-gradient' do
-      span.btn-text-gradient--gold #{t('.new')}
-br/
-.btn-border-gradient-wrap-1.btn-border-gradient-wrap--silver
-  = link_to posts_path, class: 'btn btn-border-gradient t_1' do
-    span.btn-text-gradient--silver #{t('.index')}
+  .d-flex.justify-content-center
+    .btn-border-gradient-wrap.btn-border-gradient-wrap--gold
+      = link_to new_post_path, class:'btn btn-border-gradient' do
+        span.btn-text-gradient--gold #{t('.new')}
 
+    .btn-border-gradient-wrap-1.btn-border-gradient-wrap--silver
+      = link_to posts_path, class: 'btn btn-border-gradient t_1' do
+        span.btn-text-gradient--silver #{t('.index')}
+
+h1.m-5 - 厳選された参拝 -
+
+table.table
+  thaed.td-default
+    tr.tr-tl
+      th.rank= Post.human_attribute_name(:rank)
+      th.name= Post.human_attribute_name(:title)
+      th.content= Post.human_attribute_name(:content)
+      th.yaer= Post.human_attribute_name(:last_day)
+    tbody.t-body
+      = render partial: "ranking", collection: @posts, as: :post
+
+/ = javascript_pack_tag 'hello_vue'

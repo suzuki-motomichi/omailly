@@ -1,0 +1,6 @@
+tr.tr-title.align-items-center
+  td.twd= "#{post_counter+1}位"
+  td.tty= link_to post.title, post, class:'ttt'
+  td.twd= post.content
+  td.tty
+    = "#{post.last_day}#{post.status_i18n}"
