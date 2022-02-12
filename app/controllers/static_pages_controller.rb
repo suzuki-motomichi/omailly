@@ -1,13 +1,16 @@
 class StaticPagesController < ApplicationController
   skip_before_action :require_login, only: %i[top terms privacy description]
 
-  rescue_from ActiveRecord::RecordNotFound do |exception|
-    render json: { error: '404 not found' }, status: 404
-  end
+  # rescue_from ActiveRecord::RecordNotFound do |exception|
+  #   render json: { error: '404 not found' }, status: 404
+  # end
 
+  # def top
+  #   posts = Post.select(:title, :content, :last_day)
+  #   render json: posts
+  # end
   def top
-    posts = Post.select(:title, :content, :last_day)
-    render json: posts
+    @posts = Post.order(likes: :desc).limit(10)
   end
 
   def terms; end
@@ -16,9 +19,4 @@ class StaticPagesController < ApplicationController
 
   def description; end
 
-  private
-
-  def set_post
-    post = Post.find(params[:status]).desc
-  end
 end
