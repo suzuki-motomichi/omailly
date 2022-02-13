@@ -7,7 +7,7 @@
           <th>御活躍</th>
           <th>享年</th>
         </tr>
-        <tr v-for="e in posts" :key="e.id">
+        <tr v-for="e in props.posts" :key="e">
           <td>{{ e.title }}</td>
           <td>{{ e.content }}</td>
           <td>{{ e.last_day }}</td>
@@ -28,8 +28,8 @@ export default {
   },
   mounted () {
     axios
-      .get('/static_pages/top.json')
-      .then(response => (this.top = response.data))
+      .get('/')
+      .then(response => (this.posts = response.data))
   }
 }
 </script>

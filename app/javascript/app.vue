@@ -3,7 +3,9 @@
     <div>
       <Ranking />
     </div>
-    <p>{{ message }}</p>
+    <div>
+      <router-view/>
+    </div>
   </div>
 </template>
 
@@ -19,7 +21,9 @@ const router = new VueRouter({
 Vue.use(VueRouter)
 
 export default {
-  router
+  components: {
+    Ranking
+  }
 }
 </script>
 
