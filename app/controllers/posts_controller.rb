@@ -16,7 +16,7 @@ class PostsController < ApplicationController
     if logged_in?
       @post = current_user.posts.new
     else
-      redirect_to posts_path, danger: "作成にはログインが必要です"
+      redirect_to posts_path, warning: t('.warning')
     end
   end
 
@@ -29,9 +29,9 @@ class PostsController < ApplicationController
     end
 
     if @post.save
-      redirect_to post_path(@post), success: '作成しました'
+      redirect_to post_path(@post), success: t('.success')
     else
-      flash.now['danger'] = '作成できませんでした'
+      flash.now[:warning] = t('.notice')
       render :new
     end
   end
@@ -60,9 +60,9 @@ class PostsController < ApplicationController
   def update
     @post = current_user.posts.find(params[:id])
     if @post.update(post_params)
-      redirect_to post_path(@post), success: '輪廻転生しました'
+      redirect_to post_path(@post), success: t('.success')
     else
-      flash.now['danger'] = '失敗しました'
+      flash.now[:warning] = t('warning')
       render :edit
     end
   end
@@ -70,7 +70,7 @@ class PostsController < ApplicationController
   def destroy
     @post = current_user.posts.find(params[:id])
     @post.destroy!
-    redirect_to posts_path, success: '成仏しました'
+    redirect_to posts_path, success: t('.success')
   end
 
   private
