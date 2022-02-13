@@ -20,6 +20,14 @@ table.content
     tr
       td= simple_format(h(@post.content), {}, sanitize: false, wrapper_tag: "div")
 
+-if current_user.my_post?(@post)
+  h1= link_to edit_post_path(@post), class: "text-success mx-2" do
+    button.fa.solid.fa-recycle
+    = link_to post_path(@post), class: "text-info mx-2", method: :delete, data: { confirm: ("成仏させますか？") } do
+      button.fa.solid.fa-ankh
+
+br/
+
 = link_to post_likes_path(@post), class: "like_button", method: :post, remote: true do
   button.fas.fa-pray
 span id="js-post-likes-#{@post.id}" = @post.likes

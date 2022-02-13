@@ -11,4 +11,8 @@ class User < ApplicationRecord
   before_create -> { self.uuid = SecureRandom.uuid }
 
   enum role: { general: 0, admin: 1 }
+
+  def my_post?(object)
+    id == object.user_id
+  end
 end

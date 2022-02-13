@@ -53,6 +53,26 @@ class PostsController < ApplicationController
     @post.update(likes: @like)
   end
 
+  def edit
+    @post = current_user.posts.find(params[:id])
+  end
+
+  def update
+    @post = current_user.posts.find(params[:id])
+    if @post.update(post_params)
+      redirect_to post_path(@post), success: '輪廻転生しました'
+    else
+      flash.now['danger'] = '失敗しました'
+      render :edit
+    end
+  end
+
+  def destroy
+    @post = current_user.posts.find(params[:id])
+    @post.destroy!
+    redirect_to posts_path, success: '成仏しました'
+  end
+
   private
 
   def post_params
