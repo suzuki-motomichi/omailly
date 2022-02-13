@@ -2,8 +2,7 @@ class PostsController < ApplicationController
   skip_before_action :require_login, only: %i[index new show]
   include Pagy::Backend
   def index
-    @per_page = 10
-    @pagy, @posts = pagy_countless(Post.all, items: @per_page, link_extra: 'data-remote="true"')
+    @pagy, @posts = pagy_countless(Post.all.order('created_at DESC'), items: 20, link_extra: 'data-remote="true"')
     @q.result(distinct: true).order('created_at DESC')
     if @pagy.page == @pagy.pages
       @next_page = "last"
