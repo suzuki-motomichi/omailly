@@ -49,7 +49,7 @@ class PostsController < ApplicationController
   def likes
     @post = Post.find(params[:post_id])
     @like = @post.likes + 1
-    @post.update(likes: @like)
+    @post.update!(likes: @like)
   end
 
   def edit
