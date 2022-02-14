@@ -9,9 +9,9 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       auto_login(@user)
-      redirect_to root_path, notice: t('.notice')
+      redirect_to root_path, success: t('.notice')
     else
-      render :new, alert: t('.alert')
+      render :new, warning: t('.alert')
     end
   end
 

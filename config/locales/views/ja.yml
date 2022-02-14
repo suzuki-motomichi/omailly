@@ -16,6 +16,7 @@ ja:
     new:
       title: 新規登録
       post: 確認
+      warning: 作成にはログインが必要です
     show:
       title: 詳細
       content: 御活躍
@@ -24,6 +25,24 @@ ja:
       title: 内容の確認
       back: 戻る
       post: 作成
+    create:
+      success: 作成しました
+      notice: 作成できませんでした
+    update:
+      success: 輪廻転生しました
+      warning: 失敗しました
+    destroy:
+      success: 成仏しました
+  user_sessions:
+    create:
+      notice: ログインしました
+      alert: ログインに失敗しました
+    destroy:
+      notice: ログアウトしました
+  users:
+    create:
+      notice: 登録完了しました
+      alert: 登録に失敗しました
   # 管理画面
   admin:
     js:

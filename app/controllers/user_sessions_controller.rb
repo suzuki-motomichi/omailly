@@ -6,14 +6,15 @@ class UserSessionsController < ApplicationController
   def create
     @user = login(params[:email], params[:password])
     if @user
-      redirect_to root_path, notice: t('.notice')
+      redirect_to root_path, success: t('.notice')
     else
-      render :new, alert: t('.alert')
+      flash.now[:warning] = t('.alert')
+      render :new
     end
   end
 
   def destroy
     logout
-    redirect_to root_path, notice: t('.notice')
+    redirect_to root_path, success: t('.notice')
   end
 end
