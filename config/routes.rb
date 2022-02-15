@@ -5,6 +5,11 @@ Rails.application.routes.draw do
   get '/privacy', to: 'static_pages#privacy'
   get '/description', to: 'static_pages#description'
 
+  # SNSログイン
+  post 'oauth/callback', to: 'oauths#callback'
+  get 'oauth/callback', to: 'oauths#callback'
+  get 'oauth/:provider', to: 'oauths#oauth', as: :auth_at_provider
+
   # ログイン
   get 'login', to: 'user_sessions#new'
   post 'login', to: 'user_sessions#create'
