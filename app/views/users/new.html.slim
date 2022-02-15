@@ -18,6 +18,6 @@
         = f.label :password_confirmation
         = f.password_field :password_confirmation, class:"form-control"
       .btn-border-gradient-wrap-1.btn-border-gradient-wrap--silver.button.btns.t-1
-        = f.submit User.human_attribute_name(:register), class:"btn btn-border-gradient t_1"
+        = f.submit t('.register'), class:"btn btn-border-gradient t_1"
     .text-center
       = link_to t('.login'), login_path, class: "text-white"
