@@ -1,3 +1,5 @@
+- content_for(:title, t('.title'))
+
 .container
   = form_with model: @post, local: true do |f|
     = render 'shared/error_messages', object: f.object
