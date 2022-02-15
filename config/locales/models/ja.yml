@@ -9,6 +9,11 @@ ja:
         content: 御活躍
         last_day: 享年
         submit: 確認
+      user:
+        name: お名前
+        email: メールアドレス
+        password: パスワード
+        password_confirmation: パスワード確認
   enums:
     post:
       status:
