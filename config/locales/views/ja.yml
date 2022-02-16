@@ -28,12 +28,19 @@ ja:
     create:
       success: 作成しました
       notice: 作成できませんでした
+    edit:
+      title: 編集画面
     update:
       success: 輪廻転生しました
       warning: 失敗しました
     destroy:
       success: 成仏しました
   user_sessions:
+    new:
+      title: ログインフォーム
+      submit: ログイン
+      twitter_login: ' Twitterログイン'
+      register: 新規登録
     create:
       notice: ログインしました
       alert: ログインに失敗しました
@@ -43,6 +50,10 @@ ja:
     create:
       notice: 登録完了しました
       alert: 登録に失敗しました
+    new:
+      title: "新規登録 | O'MAILLY　　　　　　"
+      register: 登録
+      login: ログインページへ
   # 管理画面
   admin:
     js:

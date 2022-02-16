@@ -11,5 +11,10 @@
         = f.password_field :password, class: "form-control", :placeholder=>"password"
       .mb-3.form-group
         .btn-border-gradient-wrap-1.btn-border-gradient-wrap--silver.button.btns.t-1
-          = f.submit 'ログイン', class: "btn btn-border-gradient t_1"
-  = link_to "新規登録", new_user_path, class: "text-white"
+          = f.submit t('.submit'), class: "btn btn-border-gradient t_1"
+.mb-3
+  = link_to auth_at_provider_path(provider: :twitter), class: "btn-sm tw-btn text-white" do
+      i.fab.fa-twitter
+      | #{(t ".twitter_login")}
+
+= link_to t('.register'), new_user_path, class: "text-white"
