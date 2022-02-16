@@ -38,19 +38,22 @@ ja:
   user_sessions:
     new:
       title: ログインフォーム
+      submit: ログイン
+      twitter_login: ' Twitterログイン'
+      register: 新規登録
     create:
       notice: ログインしました
       alert: ログインに失敗しました
     destroy:
       notice: ログアウトしました
   users:
-    new:
-      title: 新規登録
-      register: 登録
-      login: ログインページへ
     create:
       notice: 登録完了しました
       alert: 登録に失敗しました
+    new:
+      title: "新規登録 | O'MAILLY　　　　　　"
+      register: 登録
+      login: ログインページへ
   # 管理画面
   admin:
     js:

@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   root 'static_pages#top'
-  get '/terms', to: 'static_pages#terms'
-  get '/privacy', to: 'static_pages#privacy'
-  get '/description', to: 'static_pages#description'
+  get 'terms', to: 'static_pages#terms'
+  get 'privacy', to: 'static_pages#privacy'
+  get 'description', to: 'static_pages#description'
 
   # SNSログイン
   post 'oauth/callback', to: 'oauths#callback'
