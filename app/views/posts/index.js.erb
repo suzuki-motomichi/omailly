@@ -3,5 +3,5 @@
 <% else %>
     $('#records_table').append("<%= j(render @posts, post: @post)%>");
 <% end %>
-$('#next_link').html("<%= j(render 'shared/next_link') %>");
+$('#div_next_link').html("<%= j(render 'shared/next_link') %>");
 $("#pageScroll").attr('data-page', "<%= @next_page %>");
