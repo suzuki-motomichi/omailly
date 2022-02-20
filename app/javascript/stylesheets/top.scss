@@ -214,6 +214,7 @@ body {
   color: rgb(236, 215, 169);
 }
 
+// 落ち葉
 .leaf {
   position: absolute;
   padding: 0;
@@ -353,6 +354,85 @@ body {
   animation-delay: 4s;
 }
 
+// 雪 冬仕様
+.snow-fall div {
+  position: absolute;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  opacity: 0;
+  transform-origin: 0 0;
+  animation-name: snowfall;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+.snow-1 {
+  left: 20px;
+  animation-duration: 3.5s;
+  animation-delay: 0.4s;
+}
+.snow-2 {
+  left: 120px;
+  animation-duration: 5.0s;
+  animation-delay: 0.7s;
+}
+.snow-3 {
+  left: 180px;
+  animation-duration: 4.4s;
+  animation-delay: 0.6s;
+}
+.snow-4 {
+  left: 270px;
+  animation-duration: 2.7s;
+  animation-delay: 1.2s;
+}
+.snow-5 {
+  left: 360px;
+  animation-duration: 5.7s;
+  animation-delay: 2.2s;
+}
+.snow-6 {
+  left: 590px;
+  animation-duration: 3.1s;
+  animation-delay: 2.2s;
+}
+.snow-7 {
+  left:780px;
+  animation-duration: 5.7s;
+  animation-delay: 2.2s;
+}
+.snow-8 {
+  left:980px;
+  animation-duration: 3.7s;
+  animation-delay: 0.8s;
+}
+.snow-9 {
+  left: 1180px;
+  animation-duration: 4.7s;
+  animation-delay: 0.7s;
+}
+.snow-10 {
+  left: 1280px;
+  animation-duration: 3s;
+  animation-delay: 1.4s;
+}
+
+@keyframes snowfall {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  70% {
+    transform: translateY(780px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(1080px);
+    opacity: 0.3;
+  }
+}
+// Twitterボタン色
 .tw-btn{
   background-color: #1DA1F2;
   color: #fff;

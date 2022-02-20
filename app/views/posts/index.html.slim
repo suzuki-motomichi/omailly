@@ -13,9 +13,8 @@ table.table
       th.yaer= Post.human_attribute_name(:last_day)
   tbody#records_table.t-body
     #index-page-scroll.container.w-75
-      #pageScroll data-page="" 
-        - cache @posts do
-          = render @posts
+      #pageScroll data-page=""
+        = render @posts
 #div_next_link
   = render 'shared/next_link'
 = javascript_pack_tag 'pages/page_scroll', defer: true
