@@ -40,3 +40,5 @@ yarn-debug.log*
 /dic/mecab-ipadic-neologd
 .env
 cloudinary.yml
+# サイトマップ
+public/sitemap.xml.gz
