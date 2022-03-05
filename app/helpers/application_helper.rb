@@ -31,7 +31,8 @@ module ApplicationHelper
 
   def page_title(page_title = '')
     base_title = "O'MAILLY"
+    root_title = "O'MAILLY | オマイリー"
 
-    page_title.empty? ? base_title : page_title + ' | ' + base_title
+    page_title.empty? ? root_title : page_title + ' | ' + base_title
   end
 end
